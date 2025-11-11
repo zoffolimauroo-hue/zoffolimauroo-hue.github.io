@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Agenturname]: Performance Marketing & CRO Spezialisten</title>
+    
+    <!-- Lade Tailwind CSS für modernes, responsives Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (basierend auf unserer vorherigen Entwicklung) -->
+    <style>
+        :root {
+            --color-primary: #007bff;     /* Performance Blau */
+            --color-secondary: #0056b3;   /* Dunkleres Blau */
+            --color-background: #f8f9fa;  /* Hellgrauer Hintergrund */
+            --color-text: #1a1a1a;        /* Dunkler, fast schwarzer Text */
+            --color-success: #28a745;     /* CTA Grün */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
+
+        /* HEADER Styling */
+        .site-header {
+            background-color: var(--color-text);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .site-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .cta-nav-button {
+            background-color: var(--color-primary) !important;
+            color: white !important;
+            transition: background-color 0.3s;
+        }
+        .cta-nav-button:hover {
+            background-color: var(--color-secondary) !important;
+        }
+
+        /* HERO SECTION Styling (CRO Fokus) */
+        .hero-section h1 {
+            line-height: 1.1;
+            font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive Schriftgröße */
+            font-weight: 900;
+        }
+        .hero-section p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 300;
+            color: #495057;
+        }
+        
+        /* DIENSTLEISTUNGEN (List Item) Styling */
+        .service-item {
+            border-left: 6px solid var(--color-primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* FOOTER Styling */
+        .site-footer {
+            background-color: var(--color-text);
+            color: #adb5bd;
+            border-top: 1px solid #495057;
+        }
+        .footer-title {
+            font-weight: 700;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="site-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center header-content">
+            <a class="site-title tracking-tight" href="#hero-intro">
+                [AGENTURNAME]
+            </a>
+            <nav class="hidden md:flex space-x-6 text-white font-medium">
+                <a href="#services" class="hover:text-blue-400 transition">Dienstleistungen</a>
+                <a href="#about" class="hover:text-blue-400 transition">Über uns</a>
+                <a href="#contact-cta" class="px-4 py-2 rounded-full cta-nav-button">Kontakt</a>
+            </nav>
+            <!-- Mobile Menu Toggler (Optional: hier nicht implementiert für Einfachheit) -->
+        </div>
+    </header>
+
+    <main class="site-main">
+        
+        <!-- HERO SECTION: Klärt sofort, was ihr tut und wie der Kunde profitiert (CRO-Element) -->
+        <section id="hero-intro" class="hero-section pt-24 pb-16 md:pt-32 md:pb-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h1 class="mb-6 text-gray-900">
+                    Wir konvertieren Klicks in Aufträge.
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-500">
+                        Spezialisiert auf Google Ads & CRO.
+                    </span>
+                </h1>
+                
+                <p class="mb-10">
+                    Als Performance-Agentur führen wir lokale Dienstleister und E-Commerce-Shops durch messbare Google-Strategien und Conversion Rate Optimization zu nachhaltigem Wachstum.
+                </p>
+
+                <div id="contact-top-cta">
+                    <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-10 rounded-full text-white font-bold text-lg uppercase tracking-wider shadow-lg hover:shadow-xl transition duration-300" style="background-color: var(--color-success);">
+                        Jetzt Wachstum starten!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION: Die detaillierte Leistung (Visuelle Abgrenzung) -->
+        <section id="services" class="services-section py-20 bg-gray-50 border-t border-b border-gray-200">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-4xl font-extrabold mb-12 text-center text-blue-600">
+                    Unsere Kern-Dienstleistungen 🚀
+                </h2>
+
+                <div class="space-y-10">
+                    <!-- BLOCK 1: Performance Marketing -->
+                    <div class="service-item p-6 md:p-8 rounded-lg shadow-md border-opacity-75">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center text-gray-800">
+                            <span class="text-3xl mr-3 text-blue-600">🎯</span> Performance Marketing (Google Ads Management)
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-4">Wir maximieren Ihren ROI mit präzisen Google Ads Kampagnen für maximalen Erfolg.</p>
+                        <ul class="list-disc pl-6 text-gray-600 space-y-2 text-base">
+                            <li>**Für lokale Dienstleister:** Gezielte Kampagnen, die Kunden in Ihrem unmittelbaren Einzugsgebiet erreichen (Local Search Ads, Maps).</li>
+                            <li>**Für E-Commerce-Shops:** Effiziente Shopping-Kampagnen und Performance Max zur Umsatzsteigerung und CPA-Optimierung.</li>
+                            <li>**Volle Transparenz:** Kontinuierliches Monitoring durch zertifizierte Experten.</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOCK 2: Organische Auffindbarkeit & SEO -->
+                    <div class="service-item p-6 md:p-8 rounded-lg shadow-md border-opacity-75">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center text-gray-800">
+                            <span class="text-3xl mr-3 text-green-500">🗺️</span> Organische Auffindbarkeit & SEO-Strategien
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-4">Ihre Präsenz beginnt da, wo Ihre Kunden suchen – organisch und in modernen Suchumgebungen.</p>
+                        <ul class="list-disc pl-6 text-gray-600 space-y-2 text-base">
+                            <li>**Google Maps & Lokales SEO:** Optimierung Ihres Google Business Profils für regionale Dominanz.</li>
+                            <li>**Strategien für KI-Suchmaschinen:** Wir optimieren für die Generative Search Experience (SGE) von Google.</li>
+                            <li>**Technische & Content-SEO:** Fundamentale Optimierung Ihrer Website-Struktur für nachhaltig hohe Rankings.</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOCK 3: Conversion Rate Optimierung (CRO) -->
+                    <div class="service-item p-6 md:p-8 rounded-lg shadow-md border-opacity-75">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center text-gray-800">
+                            <span class="text-3xl mr-3 text-yellow-500">✨</span> Conversion Rate Optimierung (CRO)
+                        </h3>
+                        <p class="text-lg text-gray-600 mb-4">Wir stellen sicher, dass mehr Traffic zu zahlenden Kunden wird – Ihre stärkste Wachstumshebel.</p>
+                        <ul class="list-disc pl-6 text-gray-600 space-y-2 text-base">
+                            <li>**Analyse & Testing:** Datengestützte A/B-Tests, Heatmaps und Nutzer-Interviews.</li>
+                            <li>**User Experience (UX) Fokus:** Optimierung von Landingpages und des Checkouts.</li>
+                            <li>**Mehr Umsatz:** Steigerung der Abschlussquote, die den Wert jedes Klicks erhöht.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION: High-Impact Call-to-Action (CRO-Element) -->
+        <section id="contact-cta" class="cta-section py-20 md:py-32 text-white text-center">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">
+                    Bereit für messbares Wachstum?
+                </h2>
+                <p class="text-xl mb-10 opacity-80">
+                    Kontaktieren Sie uns für eine kostenlose Erstberatung.
+                </p>
+                <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-xl transition duration-300 hover:scale-105" style="background-color: var(--color-primary);">
+                    Unverbindliches Erstgespräch vereinbaren
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-10">
+        <div class="container mx-auto px-6 max-w-5xl text-center text-sm">
+            <p class="footer-title text-xl mb-2">[Agenturname]</p>
+            <p>Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
+            
+            <div class="mt-4 pt-4 border-t border-gray-700">
+                <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Powered by Gemini & GitHub Pages.</p>
+                <!-- Hier könnten Links zu Impressum und Datenschutz eingefügt werden -->
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
