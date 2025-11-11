@@ -93,7 +93,7 @@
         /* HEADER Styling */
         .site-header {
             background-color: var(--color-background-dark);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            /* Schatten für non-sticky entfernt */
         }
         .site-title {
             color: white;
@@ -273,9 +273,9 @@
 </head>
 <body class="antialiased">
 
-    <!-- HEADER & NAVIGATION: Starker Kontrast und Sticky -->
-    <header class="site-header sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-5 flex justify-between items-center max-w-7xl">
+    <!-- HEADER & NAVIGATION: Starker Kontrast, NICHT sticky (Wunsch des Kunden) -->
+    <header class="site-header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl"> <!-- py-4 statt py-5 für kleineres Design -->
             <!-- LOGO: Wachswerk mit Wachstumssymbol -->
             <a class="site-title flex items-center space-x-2" href="#hero-intro">
                 <svg class="w-8 h-8 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -749,7 +749,7 @@
                             <p class="text-gray-700 mb-6 font-semibold">Das beliebteste Modell. Kontinuierliche Optimierung, Skalierung und wöchentliches Reporting zur Senkung des CPA.</p>
                             <div class="text-5xl font-extrabold text-dark-slate mb-6">Feste Gebühr</div>
                             <ul class="text-left space-y-2 text-gray-800">
-                                <li class="flex items-center font-bold"><span class="text-cta-success mr-2">✓</span> Beinhaltet alle Setup-Leistungen</li>
+                                <li class="flex items-center font-bold"><span class="text-cta-success mr-2">✓</span> Beinhaltet alle Setup-Leistungen (falls nötig)</li>
                                 <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Kontinuierliche Keyword/Zielgruppen-Analyse</li>
                                 <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Regelmäßige Strategie-Calls (Wöchentlich)</li>
                             </ul>
