@@ -92,3 +92,91 @@ a[href^="mailto:"]:hover {
     background-color: #1e7e34;
     transform: translateY(-1px);
 }
+/*
+ * 5. CSS für Header und Footer
+ * ----------------------------
+ */
+
+/* HEADER */
+.site-header {
+    background-color: var(--color-text); /* Dunkler Hintergrund */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Elemente an den Rand schieben */
+    align-items: center;
+    max-width: 960px; /* Muss zur Container-Breite passen */
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.site-title {
+    color: white; /* Weißer Titel auf dunklem Hintergrund */
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.site-nav li {
+    background: none; /* Listenelemente in der Navigation nicht stylen */
+    border-left: none;
+    box-shadow: none;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.site-nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 0; /* Vertikale Polsterung zum Klicken */
+}
+
+.site-nav li a:hover {
+    color: var(--color-primary); /* Blau beim Hover */
+}
+
+.cta-nav-button {
+    background-color: var(--color-primary); /* Akzentfarbe für den Kontakt-Button */
+    color: white !important;
+    padding: 8px 15px !important;
+    border-radius: 4px;
+    font-weight: 700 !important;
+}
+
+.cta-nav-button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: var(--color-light-bg); /* Heller Hintergrund für den Footer */
+    color: #6c757d;
+    padding: 40px 0;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-title {
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
