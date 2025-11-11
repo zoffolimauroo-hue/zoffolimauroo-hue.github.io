@@ -290,13 +290,13 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    <!-- Chart 1: CPA Reduction (Linie) -->
+                    <!-- Chart 1: CPA Reduction (Linie) - ANGEPASST AUF KLARE REDUKTION -->
                     <div class="chart-container bg-white p-6 shadow-xl">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
                             <span class="text-cta-success mr-2">✓</span> CPA Reduktion (Kosten pro Akquise)
                         </h3>
                         <div class="relative h-40">
-                            <!-- Mock Line Chart -->
+                            <!-- Mock Line Chart Grid -->
                             <div class="absolute inset-0 flex items-end justify-between px-2 pb-2">
                                 <!-- Baseline 100% -->
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
@@ -305,11 +305,11 @@
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
                             </div>
-                            <!-- Data Line (SVG for a clean line graph) -->
+                            <!-- Data Line (SVG für klare Abwärtsbewegung von 80 auf 10) -->
                             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <!-- x=0, y=90 (Start), x=20, y=85, x=40, y=70, x=60, y=50, x=80, y=30, x=100, y=20 (End) -->
+                                <!-- Punkte: x=0, y=80 (Hoch) bis x=100, y=10 (Tief) -->
                                 <polyline fill="none" stroke="var(--color-primary)" stroke-width="2" 
-                                          points="0,85 20,75 40,60 60,40 80,30 100,20" 
+                                          points="0,80 20,70 40,55 60,40 80,30 100,10" 
                                           stroke-linecap="round" stroke-linejoin="round"/>
                                 <!-- Gradient Area below line -->
                                 <defs>
@@ -319,7 +319,7 @@
                                     </linearGradient>
                                 </defs>
                                 <polygon fill="url(#cpaGradient)" 
-                                         points="0,100 0,85 20,75 40,60 60,40 80,30 100,20 100,100"/>
+                                         points="0,100 0,80 20,70 40,55 60,40 80,30 100,10 100,100"/>
                             </svg>
                             <!-- Success marker -->
                             <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">-65%</div>
@@ -327,24 +327,24 @@
                         <p class="text-sm text-center text-gray-500 mt-2">Zeitraum: 6 Monate (Mock-Daten)</p>
                     </div>
 
-                    <!-- Chart 2: Conversion Rate Increase (Bar) -->
+                    <!-- Chart 2: Conversion Rate Increase (Bar) - KLARER VERGLEICH -->
                     <div class="chart-container bg-white p-6 shadow-xl">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
-                            <span class="text-cta-success mr-2">✓</span> Conversion Rate Steigerung
+                            <span class="text-cta-success mr-2">✓</span> Conversion Rate Steigerung (CRO)
                         </h3>
                         <div class="relative h-40 flex items-end justify-around pb-2">
                             <!-- Baseline -->
                             <div class="absolute left-0 right-0 bottom-2 border-t border-gray-200"></div>
                             
-                            <!-- Bar 1 (Monat 1) -->
+                            <!-- Bar 1 (Vorher 30%) -->
                             <div class="text-center w-1/4">
-                                <div class="chart-bar bg-accent-cyan/60 rounded-t-sm mx-auto" style="height: 30%; width: 60%;" title="Monat 1"></div>
-                                <span class="text-xs text-gray-500 mt-1 block">M1</span>
+                                <div class="chart-bar bg-accent-cyan/60 rounded-t-sm mx-auto" style="height: 30%; width: 70%;" title="Vorher (30%)"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">Vorher (1.2%)</span>
                             </div>
-                            <!-- Bar 2 (Monat 6) -->
+                            <!-- Bar 2 (Nachher 80%) -->
                             <div class="text-center w-1/4">
-                                <div class="chart-bar bg-accent-cyan rounded-t-sm mx-auto" style="height: 80%; width: 60%;" title="Monat 6"></div>
-                                <span class="text-xs text-gray-500 mt-1 block">M6</span>
+                                <div class="chart-bar bg-accent-cyan rounded-t-sm mx-auto" style="height: 80%; width: 70%;" title="Nachher (80%)"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">Nachher (3.2%)</span>
                             </div>
                             
                             <!-- Success marker -->
@@ -353,26 +353,30 @@
                         <p class="text-sm text-center text-gray-500 mt-2">Vorher vs. Nachher (Mock-Daten)</p>
                     </div>
 
-                    <!-- Chart 3: Search Impression Share (Donut/Progress) -->
+                    <!-- Chart 3: NEU - Lead Quality Score Improvement -->
                     <div class="chart-container bg-white p-6 shadow-xl">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
-                            <span class="text-cta-success mr-2">✓</span> Search Impression Share Zuwachs
+                            <span class="text-cta-success mr-2">✓</span> Lead Quality Score Steigerung
                         </h3>
-                        <div class="relative h-40 flex items-center justify-center">
-                            <!-- SVG Progress Circle for 85% -->
-                            <svg class="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
-                                <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50"/>
-                                <!-- The circumference is 2 * pi * r = 2 * 3.14159 * 45 ≈ 282.7 -->
-                                <!-- 85% of 282.7 is 240.3 -->
-                                <circle class="text-accent-cyan" stroke-width="8" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" 
-                                        stroke-dasharray="240.3, 282.7" stroke-linecap="round"/>
-                            </svg>
-                            <div class="absolute text-center">
-                                <span class="text-4xl font-extrabold text-dark-slate">85%</span>
-                                <p class="text-sm text-gray-500">Marktanteil</p>
+                        <div class="relative h-40 flex items-end justify-around pb-2">
+                            <!-- Baseline -->
+                            <div class="absolute left-0 right-0 bottom-2 border-t border-gray-200"></div>
+                            
+                            <!-- Bar 1 (Vorher 40%) -->
+                            <div class="text-center w-1/4">
+                                <div class="chart-bar bg-dark-slate/50 rounded-t-sm mx-auto" style="height: 40%; width: 70%;" title="Vorher (40%)"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">Start Score</span>
                             </div>
+                            <!-- Bar 2 (Nachher 90%) -->
+                            <div class="text-center w-1/4">
+                                <div class="chart-bar bg-dark-slate rounded-t-sm mx-auto" style="height: 90%; width: 70%;" title="Nachher (90%)"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">Ziel Score</span>
+                            </div>
+                            
+                            <!-- Success marker -->
+                            <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">+125%</div>
                         </div>
-                        <p class="text-sm text-center text-gray-500 mt-2">Sichtbarkeit in der Suche (Mock-Daten)</p>
+                        <p class="text-sm text-center text-gray-500 mt-2">Fokus auf qualifizierte Leads (Mock-Daten)</p>
                     </div>
                 </div>
             </div>
@@ -457,7 +461,7 @@
                     Jede Kampagne ein Volltreffer: Unsere Google Ads Expertise
                 </h2>
                 <p class="text-xl mb-16 text-center text-gray-600 max-w-3xl mx-auto">
-                    Wir setzen nicht nur auf Standard-Kampagnen. Wir wählen das Tool, das Ihre Ziele am effizientesten erreicht – von lokaler Reichweite bis E-Commerce ROAS.
+                    Wir wählen das Tool, das Ihre Ziele am effizientesten erreicht – von lokaler Reichweite bis E-Commerce ROAS.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -534,7 +538,7 @@
             </div>
         </section>
 
-        <!-- METRICS SECTION: Zahlen & Fakten (METRIK 3 ANGEPASST) -->
+        <!-- METRICS SECTION: Zahlen & Fakten -->
         <section id="about" class="about-section py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-4xl font-extrabold mb-4 text-dark-slate">Fakten schaffen Vertrauen: Unsere Performance 📊</h2>
@@ -560,7 +564,7 @@
                              KUNDENBINDUNG
                         </p>
                     </div>
-                    <!-- Metric 3: NEUE METRIK -->
+                    <!-- Metric 3: Erstellte Accounts -->
                     <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card">
                         <span class="text-5xl font-extrabold block text-accent-cyan">20+</span>
                         <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
@@ -572,7 +576,7 @@
             </div>
         </section>
 
-        <!-- FOUNDER / ÜBER UNS SECTION: Der menschliche Faktor (Bio aktualisiert) -->
+        <!-- FOUNDER / ÜBER UNS SECTION: Der menschliche Faktor (Bildpfad korrigiert) -->
         <section id="founder" class="py-24 bg-dark-slate text-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-16 text-center text-white">
