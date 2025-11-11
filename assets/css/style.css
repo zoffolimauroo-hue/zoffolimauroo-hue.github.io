@@ -180,3 +180,47 @@ a[href^="mailto:"]:hover {
     margin-top: 20px;
     font-size: 0.9em;
 }
+/*
+ * 6. Hero Section und Layout-Anpassungen für Ästhetik
+ * ----------------------------------------------------
+ */
+
+/* Grundlegendes Layout für den Haupt-Inhaltsbereich */
+.site-main {
+    padding-top: 50px; /* Abstand vom Header */
+    padding-bottom: 50px;
+}
+
+/* Anpassung des Containers für mehr Platz an den Seiten auf großen Bildschirmen */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px; /* Vergrößerung der maximalen Breite */
+    }
+}
+
+/* HERO SECTION Styling (Hervorhebung des ersten Blocks) */
+/* Wir stylen hier den H1 und den Absatz, der direkt darauf folgt */
+h1 {
+    font-size: 3.5em; /* Deutlich größer */
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 900; /* Extra Fett */
+    border-bottom: none; /* Akzentlinie entfernen, da zu statisch */
+    color: #1a1a1a;
+}
+
+/* Der erste Absatz nach H1 wird zur Sub-Headline */
+.site-main > .container > p:first-of-type {
+    font-size: 1.5em; /* Deutlich größerer Lead-Text */
+    font-weight: 300; /* Dünn für Kontrast */
+    color: #495057;
+    margin-bottom: 40px;
+}
+
+/* CTA Button im Hero-Bereich noch auffälliger gestalten */
+a[href^="mailto:"] {
+    padding: 18px 40px; /* Größerer Klickbereich */
+    font-size: 1.2em;
+    border-radius: 50px; /* Pillenform */
+}
