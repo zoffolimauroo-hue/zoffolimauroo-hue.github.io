@@ -251,7 +251,8 @@
 </head>
 <body class="antialiased">
 
-    <header class="site-header sticky top-0 z-50 shadow-md"> <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+    <header class="site-header sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
             <a class="site-title flex items-center space-x-2" href="#hero-intro">
                 <svg class="w-8 h-8 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
@@ -260,7 +261,6 @@
             </a>
             
             <nav class="hidden md:flex space-x-6 items-center">
-                <a href="#services" class="text-white hover:text-accent-cyan transition duration-200">Services</a>
                 <a href="#case-studies" class="text-white hover:text-accent-cyan transition duration-200">Fallstudien</a>
                 <a href="#faq" class="text-white hover:text-accent-cyan transition duration-200">FAQ</a>
                 <a href="#contact-form" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-cta-success hover:bg-green-600 cta-nav-button text-white hover:scale-105 shadow-lg">Kostenlose Analyse</a>
@@ -273,7 +273,6 @@
 
         <nav id="mobileMenu" class="md:hidden hidden bg-dark-slate/95 absolute w-full top-full shadow-lg border-t border-gray-700">
             <div class="px-6 py-4 flex flex-col space-y-3">
-                <a href="#services" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Services</a>
                 <a href="#case-studies" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Fallstudien</a>
                 <a href="#faq" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">FAQ</a>
                 <a href="#contact-form" class="w-full text-center py-3 rounded-lg font-bold bg-cta-success text-white hover:bg-green-600 transition duration-300 mt-3 shadow-lg">Kostenlose Analyse</a>
@@ -285,12 +284,16 @@
         
         <section id="hero-intro" class="hero-section pt-32 pb-24 md:pt-40 md:pb-32 bg-dark-slate">
             <div class="container mx-auto px-6 max-w-6xl text-center">
+
+                <p class="mb-4 text-lg font-semibold text-accent-cyan uppercase tracking-wider">
+                    Performance Marketing für DACH
+                </p>
+
                 <h1 class="mb-6 text-white text-5xl md:text-6xl font-extrabold leading-tight">
-                    Starten oder Skalieren Sie mit
+                    Qualifizierte Kundenanfragen durch 
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-green-400">
-                        Qualifizierten Kundenanfragen.
+                        datengetriebene Google Ads.
                     </span>
-                    Ihr Wachstum beginnt hier.
                 </h1>
                 
                 <p class="mb-12 max-w-3xl mx-auto text-gray-300 text-xl">
@@ -395,14 +398,14 @@
                                     </linearGradient>
                                 </defs>
                                 <polyline fill="none" stroke="var(--color-primary)" stroke-width="2.5" 
-                                          points="0,80 50,40 100,20" 
+                                          points="5,80 50,40 95,20" 
                                           stroke-linecap="round" stroke-linejoin="round"/>
                                 <polygon fill="url(#cpaGradient)" 
-                                          points="0,100 0,80 50,40 100,20 100,100"/>
+                                          points="5,100 5,80 50,40 95,20 95,100"/>
                                 
-                                <circle cx="0" cy="80" r="2" fill="var(--color-primary)" />
+                                <circle cx="5" cy="80" r="2" fill="var(--color-primary)" />
                                 <circle cx="50" cy="40" r="2" fill="var(--color-primary)" />
-                                <circle cx="100" cy="20" r="2" fill="var(--color-primary)" />
+                                <circle cx="95" cy="20" r="2" fill="var(--color-primary)" />
                             </svg>
                             <span class="absolute top-2 left-0 text-xs text-gray-500">Niedrig (Ziel)</span>
                             <span class="absolute bottom-2 right-0 text-xs text-gray-500">Monat 6</span>
@@ -438,8 +441,8 @@
                             <span class="text-cta-success mr-2">✓</span> Lead Quality Score Steigerung
                         </h3>
                          <div class="relative h-40 flex items-center justify-center">
-                              <div class="w-32 h-32 rounded-full border-8 border-gray-200/50 flex items-center justify-center relative">
-                                   <div class="absolute inset-0 rounded-full" style="background: conic-gradient(var(--color-dark-slate) 90%, #eee 90%);"></div>
+                              <div class="w-32 h-32 rounded-full border-8 border-gray-100 flex items-center justify-center relative">
+                                   <div class="absolute inset-0 rounded-full" style="background: conic-gradient(var(--color-primary) 90%, #f3f4f6 90%);"></div>
                                    <div class="w-24 h-24 rounded-full bg-white relative z-10 flex flex-col items-center justify-center border-2 border-gray-100">
                                        <span class="text-4xl font-extrabold text-dark-slate">90%</span>
                                        <span class="text-xs text-gray-500 mt-1">Ziel-Qualität</span>
@@ -573,7 +576,7 @@
                     </div>
                     <div class="mb-8 text-sm text-gray-600">
                         <input type="checkbox" id="privacy" required class="mr-2 text-accent-cyan focus:ring-accent-cyan rounded">
-                        <label for="privacy">Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. *</description>
+                        <label for="privacy">Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden. *</label>
                     </div>
                     
                     <button type="submit" 
@@ -643,7 +646,6 @@
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quicklinks</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#services" class="hover:text-accent-cyan transition duration-200">Services</a></li>
                         <li><a href="#case-studies" class="hover:text-accent-cyan transition duration-200">Fallstudien</a></li>
                         <li><a href="#faq" class="hover:text-accent-cyan transition duration-200">FAQ</a></li>
                         <li><a href="#contact-form" class="hover:text-accent-cyan transition duration-200">Kostenlose Analyse</a></li>
