@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Agenturname]: Performance Marketing & CRO Spezialisten</title>
+    <title>[Agenturname]: Ihr Partner für exponentielles Wachstum</title>
     
     <!-- Lade Tailwind CSS für modernes, responsives Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +47,7 @@
             line-height: 1.6;
         }
 
-        /* HEADER Styling (Transparent auf Hero) */
+        /* HEADER Styling */
         .site-header {
             background-color: var(--color-background-dark);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -59,6 +59,9 @@
             font-weight: 900;
             letter-spacing: -0.5px;
         }
+        .cta-nav-button:hover {
+             box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.5); /* Fokus-Effekt für CTA im Header */
+        }
 
         /* HERO SECTION Styling */
         .hero-section {
@@ -67,26 +70,51 @@
         }
         .hero-section h1 {
             line-height: 1.1;
-            font-size: clamp(3rem, 7vw, 5rem); /* Noch größer und eindrucksvoller */
+            font-size: clamp(3rem, 7vw, 5rem);
             font-weight: 900;
         }
         .hero-section p {
             font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             font-weight: 300;
-            color: #94a3b8; /* Heller, subtiler Text */
+            color: #94a3b8;
         }
         
         /* DIENSTLEISTUNGEN (Grid Item) Styling */
         .service-item {
-            border-left: none; /* Entfernen des Balkens, da wir ein Grid nutzen */
             transition: all 0.3s ease-in-out;
             background-color: white;
             border: 1px solid #e2e8f0;
-            border-radius: 0.75rem; /* Stärkere Rundung */
+            border-radius: 0.75rem;
         }
         .service-item:hover {
-            transform: translateY(-8px); /* Stärkerer Hover-Effekt */
-            box-shadow: 0 20px 30px rgba(6, 182, 212, 0.2); /* Akzent-Schatten */
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(6, 182, 212, 0.2);
+        }
+        
+        /* TESTIMONIAL Styling */
+        .testimonial-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* PARTNER LOGO Styling */
+        .logo-box {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+            filter: grayscale(100%);
+        }
+        .logo-box:hover {
+            opacity: 1;
+            filter: grayscale(0%);
         }
 
         /* FOOTER Styling */
@@ -110,9 +138,10 @@
                 [AGENTURNAME]
             </a>
             <nav class="hidden md:flex space-x-8 text-white font-semibold">
-                <a href="#services" class="hover:text-accent-cyan transition">Dienstleistungen</a>
-                <a href="#about" class="hover:text-accent-cyan transition">Über uns</a>
-                <a href="#contact-cta" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-accent-cyan hover:bg-accent-dark">Kontakt</a>
+                <a href="#services" class="hover:text-accent-cyan transition">Leistungen</a>
+                <a href="#process" class="hover:text-accent-cyan transition">Prozess</a>
+                <a href="#testimonials" class="hover:text-accent-cyan transition">Referenzen</a>
+                <a href="#contact-cta" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-accent-cyan hover:bg-accent-dark cta-nav-button">Kostenlose Analyse</a>
             </nav>
             <!-- Mobile Menu Toggler (Optional) -->
         </div>
@@ -120,111 +149,224 @@
 
     <main class="site-main">
         
-        <!-- HERO SECTION: High-Impact mit Dunklem Hintergrund -->
-        <section id="hero-intro" class="hero-section pt-32 pb-24 md:pt-48 md:pb-32">
+        <!-- HERO SECTION: High-Impact mit Dunklem Hintergrund (TEXT OPTIMIERT) -->
+        <section id="hero-intro" class="hero-section pt-32 pb-16 md:pt-48 md:pb-24">
             <div class="container mx-auto px-6 max-w-6xl text-center">
                 <h1 class="mb-6 text-white">
-                    Messbare Ergebnisse.
+                    Ihr Wachstum. Unsere Strategie. 
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-green-400">
-                        Keine Kompromisse.
+                        100% Messbar.
                     </span>
                 </h1>
                 
                 <p class="mb-12 max-w-3xl mx-auto">
-                    Ihre Performance-Agentur für nachhaltiges E-Commerce-Wachstum und lokale Dominanz durch datengestützte Google-Strategien und Conversion Rate Optimization.
+                    Wir sind die Speerspitze im Performance Marketing. Wir wandeln Ihre Google-Ausgaben in exponentielles Wachstum um – fokussiert auf E-Commerce-Umsatz und lokale Marktführerschaft.
                 </p>
 
                 <div id="contact-top-cta">
-                    <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-lg bg-cta-success hover:bg-green-600 transition duration-300 hover:shadow-2xl hover:scale-105">
+                    <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-lg bg-cta-success hover:bg-green-600 transition duration-300 hover:shadow-2xl hover:scale-105 shadow-green-500/50">
                         Kostenlose Potenzialanalyse anfordern
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES SECTION: Sauberes Grid-Layout -->
+        <!-- PARTNER / TRUST SECTION (NEU) -->
+        <section id="partners" class="py-12 bg-dark-slate/90">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <p class="text-center text-sm font-semibold uppercase tracking-wider text-gray-400 mb-8">
+                    Vertrauen Sie Experten. Ausgewählte Partner und Kunden:
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
+                    
+                    <!-- Logo Placeholder 1 -->
+                    <div class="logo-box">
+                        <span class="text-lg font-bold text-gray-300">Google Ads</span>
+                    </div>
+
+                    <!-- Logo Placeholder 2 -->
+                    <div class="logo-box">
+                        <span class="text-xl font-extrabold text-gray-300">Shopify</span>
+                    </div>
+
+                    <!-- Logo Placeholder 3 -->
+                    <div class="logo-box">
+                        <span class="text-lg font-semibold text-gray-300">ConversionLab</span>
+                    </div>
+
+                    <!-- Logo Placeholder 4 -->
+                    <div class="logo-box hidden md:flex">
+                        <span class="text-xl font-bold italic text-gray-300">Local Hero</span>
+                    </div>
+
+                    <!-- Logo Placeholder 5 -->
+                    <div class="logo-box hidden md:flex">
+                        <span class="text-lg font-extrabold text-gray-300">SEA-Profis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION: Sauberes Grid-Layout (TEXT OPTIMIERT) -->
         <section id="services" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-16 text-center text-dark-slate">
-                    Unsere Kern-Dienstleistungen 🚀
+                    Wachstum durch Expertise: Unsere Kernbereiche 🎯
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <!-- BLOCK 1: Performance Marketing -->
+                    <!-- BLOCK 1: Performance Marketing (TEXT OPTIMIERT) -->
                     <div class="service-item p-8 shadow-xl">
-                        <span class="text-5xl mb-4 block text-accent-cyan">🎯</span>
-                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Performance Marketing</h3>
-                        <p class="text-lg text-gray-600 mb-4">Maximierung Ihres ROI durch präzise Google Ads, spezialisiert auf Shopping, PMax und lokale Kampagnen.</p>
+                        <span class="text-5xl mb-4 block text-accent-cyan">📈</span>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Google Performance Mastery</h3>
+                        <p class="text-lg text-gray-600 mb-4">Wir garantieren den maximalen Return on Investment (ROI). Präzise Google Ads-Strategien, spezialisiert auf E-Commerce (PMax, Shopping) und lokale Kampagnen.</p>
                         <ul class="list-none pl-0 text-gray-500 space-y-2 text-base mt-4">
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Lokale Reichweite (Maps)</li>
                             <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> E-Commerce Umsatz (PMax)</li>
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Transparenz & Berichte</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Lokale Reichweite & Maps-Ads</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Volle Transparenz & Reporting</li>
                         </ul>
                     </div>
 
-                    <!-- BLOCK 2: Organische Auffindbarkeit & SEO -->
+                    <!-- BLOCK 2: Organische Auffindbarkeit & SEO (TEXT OPTIMIERT) -->
                     <div class="service-item p-8 shadow-xl">
-                        <span class="text-5xl mb-4 block text-cta-success">🗺️</span>
-                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Organische Auffindbarkeit & SEO</h3>
-                        <p class="text-lg text-gray-600 mb-4">Wir optimieren Ihre Präsenz für moderne Suchumgebungen und garantieren nachhaltig hohe Rankings.</p>
+                        <span class="text-5xl mb-4 block text-cta-success">👑</span>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Strategische SEO & Lokale Dominanz</h3>
+                        <p class="text-lg text-gray-600 mb-4">Erobern Sie organische Suchergebnisse. Wir optimieren für moderne Suchumgebungen (SGE, Voice Search) und stellen sicher, dass Sie in Ihrer Region unübersehbar sind.</p>
                         <ul class="list-none pl-0 text-gray-500 space-y-2 text-base mt-4">
                             <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Google Maps & GBP Optimierung</li>
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> KI-Suchmaschinen (SGE-Ready)</li>
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Technisches SEO-Fundament</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Zukunftssicheres (KI-Ready) SEO</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Starkes technisches Fundament</li>
                         </ul>
                     </div>
 
-                    <!-- BLOCK 3: Conversion Rate Optimierung (CRO) -->
+                    <!-- BLOCK 3: Conversion Rate Optimierung (CRO) (TEXT OPTIMIERT) -->
                     <div class="service-item p-8 shadow-xl">
-                        <span class="text-5xl mb-4 block text-yellow-500">✨</span>
-                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Conversion Rate Optimierung (CRO)</h3>
-                        <p class="text-lg text-gray-600 mb-4">Verwandeln Sie mehr Besucher in zahlende Kunden mit datengestützten A/B-Tests und UX-Analyse.</p>
+                        <span class="text-5xl mb-4 block text-yellow-500">🧪</span>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">Conversion Boost (CRO)</h3>
+                        <p class="text-lg text-gray-600 mb-4">Ihre Website muss mehr arbeiten. Wir verwandeln Klicks in Kunden, indem wir Hypothesen testen, User Experience verbessern und die Abschlussquote steigern.</p>
                         <ul class="list-none pl-0 text-gray-500 space-y-2 text-base mt-4">
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> A/B-Testing & Heatmaps</li>
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> User Experience (UX) Fokus</li>
-                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Steigerung der Abschlussquote</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Kontinuierliches A/B-Testing</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Heatmaps & User-Analyse</li>
+                            <li class="flex items-center"><span class="text-accent-cyan mr-2">✓</span> Fokus auf Umsatz pro Besucher</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- ABOUT SECTION: Vertrauensbildung und Expertise (Minimalistische Darstellung) -->
-        <section id="about" class="about-section py-24 bg-gray-50">
+
+        <!-- PROCESS SECTION: Klarheit schafft Vertrauen -->
+        <section id="process" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-4xl font-extrabold mb-16 text-center text-dark-slate">
+                    Von der Analyse zur Skalierung: So arbeiten wir ⚙️
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                    
+                    <!-- STEP 1: Analyse -->
+                    <div class="p-6">
+                        <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM19 12a7 7 0 00-14 0c0 3.328 2.375 6.136 5.5 6.786V21h3v-2.214C16.625 18.136 19 15.328 19 12z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">1. Tiefer Audit & Discovery</h3>
+                        <p class="text-gray-600">Wir starten mit einer datengestützten Überprüfung Ihrer gesamten digitalen Performance. Wir identifizieren präzise, wo die größten und schnellsten Wachstumspotenziale liegen.</p>
+                    </div>
+
+                    <!-- STEP 2: Strategie -->
+                    <div class="p-6">
+                        <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.33 0-2.5.57-3.35 1.5h6.7c-0.85-0.93-2.02-1.5-3.35-1.5zM21 16c-1.33 0-2.5-.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM21 3v13l-12 3V6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">2. Implementierung & Testing</h3>
+                        <p class="text-gray-600">Wir entwickeln die exakte Ads/SEO/CRO-Strategie. Dann implementieren und optimieren wir alle Kampagnen kontinuierlich, um maximale Effizienz zu erzielen.</p>
+                    </div>
+
+                    <!-- STEP 3: Wachstum -->
+                    <div class="p-6">
+                        <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8m-6 4H4a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-dark-slate">3. Monitoring & Skalierung</h3>
+                        <p class="text-gray-600">Wir agieren proaktiv: Tägliches Monitoring, Budgetanpassungen und Skalierung erfolgreicher Ansätze sichern Ihren Vorsprung und das langfristige, nachhaltige Wachstum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION: Visuelle Metriken (TEXT OPTIMIERT) -->
+        <section id="about" class="about-section py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
-                <h2 class="text-4xl font-extrabold mb-4 text-dark-slate">Ihr Partner für messbaren Erfolg.</h2>
+                <h2 class="text-4xl font-extrabold mb-4 text-dark-slate">Fakten schaffen Vertrauen: Unsere Performance 📊</h2>
                 <p class="text-xl mb-12 text-gray-600">
                     Wir fokussieren uns ausschließlich auf das, was zählt: **Ihren Return on Investment.** Unsere zertifizierten Experten bringen jahrelange Erfahrung in Google Ads und datengestützter CRO mit.
                 </p>
                 
-                <div class="grid grid-cols-3 gap-8 text-dark-slate border-t border-b border-gray-300 py-6">
-                    <div class="p-2">
+                <!-- METRICS GRID MIT ICONS -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-dark-slate border-t border-b border-gray-300 py-6">
+                    <!-- Metric 1 -->
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
                         <span class="text-5xl font-extrabold block text-accent-cyan">10+</span>
-                        <span class="text-sm uppercase tracking-widest text-gray-600">Jahre Erfahrung</span>
+                        <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
+                            <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 18h4m-4-6h4m0-6h-4m-4 12v-6m-4 6v-6"></path></svg>
+                            JAHRE MARKTWISSEN
+                        </p>
                     </div>
-                    <div class="p-2">
+                    <!-- Metric 2 -->
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
                         <span class="text-5xl font-extrabold block text-accent-cyan">95%</span>
-                        <span class="text-sm uppercase tracking-widest text-gray-600">Kundenzufriedenheit</span>
+                        <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
+                             <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7h-4V3H7v4H3v4h4v4h4v4h4v-4h4v-4h-4V9z"></path></svg>
+                             KUNDENBINDUNG
+                        </p>
                     </div>
-                    <div class="p-2">
+                    <!-- Metric 3 -->
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner">
                         <span class="text-5xl font-extrabold block text-accent-cyan">2x</span>
-                        <span class="text-sm uppercase tracking-widest text-gray-600">ROI-Steigerung</span>
+                        <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
+                            <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            DURCHSCHN. ROI-BOOST
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FINAL CTA SECTION: High-Impact Call-to-Action (CRO-Element) -->
+        <!-- TESTIMONIALS SECTION: Social Proof -->
+        <section id="testimonials" class="py-24 bg-dark-slate">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-4xl font-extrabold mb-16 text-center text-white">
+                    Echte Resultate: Was unsere Kunden sagen 🤝
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card p-8 bg-white/5 backdrop-blur-sm border border-gray-700/50 text-gray-200">
+                        <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
+                        <p class="text-lg italic mb-6">"Seit der Umstellung auf die CRO-Strategie von [AGENTURNAME] konnten wir unsere Conversion Rate um 35% steigern, ohne das Budget erhöhen zu müssen. Das ist echtes Performance-Wachstum!"</p>
+                        <div class="font-bold text-white">- Max Mustermann, E-Commerce Manager</div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card p-8 bg-white/5 backdrop-blur-sm border border-gray-700/50 text-gray-200">
+                        <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
+                        <p class="text-lg italic mb-6">"Die lokale Google Ads Optimierung hat unsere Anfragen verdoppelt. Wir sind jetzt in der Google-Maps-Suche die Nummer 1 in unserer Region. Absolut empfehlenswert."</p>
+                        <div class="font-bold text-white">- Lisa Schmidt, Lokaler Dienstleister</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA SECTION: High-Impact Call-to-Action (TEXT OPTIMIERT) -->
         <section id="contact-cta" class="py-24 md:py-32 text-white text-center" style="background-color: var(--color-background-dark);">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">
-                    Zeit, die Performance zu maximieren.
+                    Starten Sie jetzt Ihre digitale Marktführerschaft.
                 </h2>
                 <p class="text-xl mb-12 opacity-80">
-                    Wir bieten Ihnen eine kostenlose Potenzialanalyse an. Starten Sie jetzt unverbindlich.
+                    Wir bieten Ihnen eine **kostenlose Potenzialanalyse** Ihrer bestehenden Kampagnen. Investieren Sie 15 Minuten in Ihr zukünftiges Wachstum.
                 </p>
                 <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-xl transition duration-300 bg-accent-cyan hover:bg-accent-dark hover:scale-105 shadow-cyan-500/50">
-                    Kostenlose Analyse anfordern
+                    Kostenlose Analyse buchen
                 </a>
             </div>
         </section>
@@ -238,7 +380,7 @@
             <p>Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
             
             <div class="mt-8 pt-6 border-t border-gray-700">
-                <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Implementiert mit Tailwind CSS & GitHub Pages.</p>
+                <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Agentur für digitales Wachstum.</p>
                 <!-- Impressum / Datenschutz Links -->
                 <div class="mt-3 space-x-4 text-xs">
                     <a href="#" class="hover:text-white transition">Impressum</a>
