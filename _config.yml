@@ -9,3 +9,7 @@ title: Wachswerk
 
 # Eine kurze Beschreibung
 description: Performance Marketing für lokale Dienstleister und E-Commerce Shops.
+
+# CSS-Link für das Styling hinzufügen
+header_pages:
+  - /assets/css/style.css
