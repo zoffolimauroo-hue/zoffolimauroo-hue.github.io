@@ -9,6 +9,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     
+    <!-- Konfiguriere Tailwind um Inter als Standard-Font zu verwenden -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+              },
+            }
+          }
+        }
+    </script>
+
     <!-- Custom Styles (basierend auf unserer vorherigen Entwicklung) -->
     <style>
         :root {
@@ -61,6 +74,7 @@
             border-left: 6px solid var(--color-primary);
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: white;
+            border-radius: 0.5rem; /* Abgerundete Ecken */
         }
         .service-item:hover {
             transform: translateY(-5px);
@@ -84,7 +98,7 @@
 
     <!-- HEADER & NAVIGATION -->
     <header class="site-header sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center header-content">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a class="site-title tracking-tight" href="#hero-intro">
                 [AGENTURNAME]
             </a>
@@ -93,7 +107,7 @@
                 <a href="#about" class="hover:text-blue-400 transition">Über uns</a>
                 <a href="#contact-cta" class="px-4 py-2 rounded-full cta-nav-button">Kontakt</a>
             </nav>
-            <!-- Mobile Menu Toggler (Optional: hier nicht implementiert für Einfachheit) -->
+            <!-- Mobile Menu Toggler (Hier nicht implementiert, da Fokus auf Einfachheit) -->
         </div>
     </header>
 
@@ -170,18 +184,42 @@
                 </div>
             </div>
         </section>
+        
+        <!-- ABOUT SECTION: Vertrauensbildung und Expertise -->
+        <section id="about" class="about-section py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-4xl font-extrabold mb-4 text-gray-800">Ihre Partner für messbaren Erfolg.</h2>
+                <p class="text-xl mb-10 text-gray-600">
+                    Wir sind keine gewöhnliche Agentur. Wir fokussieren uns ausschließlich auf das, was zählt: **Ihren Return on Investment.** Unsere zertifizierten Experten bringen jahrelange Erfahrung in Google Ads und datengestützter CRO mit, um Ihnen einen echten Wettbewerbsvorteil zu verschaffen.
+                </p>
+                <div class="flex justify-center space-x-8 text-blue-600">
+                    <div class="p-4">
+                        <span class="text-5xl font-bold block">10+</span>
+                        <span class="text-sm uppercase tracking-wider">Jahre Erfahrung</span>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-5xl font-bold block">95%</span>
+                        <span class="text-sm uppercase tracking-wider">Kundenzufriedenheit</span>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-5xl font-bold block">2x</span>
+                        <span class="text-sm uppercase tracking-wider">ROI-Steigerung (Durchschnitt)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- FINAL CTA SECTION: High-Impact Call-to-Action (CRO-Element) -->
-        <section id="contact-cta" class="cta-section py-20 md:py-32 text-white text-center">
+        <section id="contact-cta" class="cta-section py-20 md:py-32 text-white text-center" style="background-color: var(--color-primary);">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">
                     Bereit für messbares Wachstum?
                 </h2>
-                <p class="text-xl mb-10 opacity-80">
-                    Kontaktieren Sie uns für eine kostenlose Erstberatung.
+                <p class="text-xl mb-10 opacity-90">
+                    Wir bieten Ihnen eine kostenlose Potenzialanalyse an. Starten Sie jetzt unverbindlich.
                 </p>
-                <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-xl transition duration-300 hover:scale-105" style="background-color: var(--color-primary);">
-                    Unverbindliches Erstgespräch vereinbaren
+                <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-xl transition duration-300 hover:scale-105" style="background-color: var(--color-success);">
+                    Kostenlose Analyse anfordern
                 </a>
             </div>
         </section>
@@ -195,8 +233,12 @@
             <p>Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
             
             <div class="mt-4 pt-4 border-t border-gray-700">
-                <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Powered by Gemini & GitHub Pages.</p>
-                <!-- Hier könnten Links zu Impressum und Datenschutz eingefügt werden -->
+                <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Implementiert mit Tailwind CSS & GitHub Pages.</p>
+                <!-- Impressum / Datenschutz (Platzhalter) -->
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-white transition">Impressum</a>
+                    <a href="#" class="hover:text-white transition">Datenschutz</a>
+                </div>
             </div>
         </div>
     </footer>
