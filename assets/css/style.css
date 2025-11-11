@@ -224,3 +224,38 @@ a[href^="mailto:"] {
     font-size: 1.2em;
     border-radius: 50px; /* Pillenform */
 }
+/*
+ * 7. Sektionen und visuelle Hierarchie
+ * ------------------------------------
+ */
+
+/* Alle Sektionen erhalten ein sauberes Polster */
+section {
+    padding: 80px 0; /* Großzügige vertikale Abstände */
+}
+
+/* Die Sektion mit den Dienstleistungen erhält einen hellgrauen Hintergrund, um sie abzuheben */
+.services-section {
+    background-color: var(--color-light-bg); 
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* CTA Sektion am Ende wird dunkler und auffälliger */
+.cta-section {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #343a40; /* Dunkler Hintergrund */
+    color: white;
+}
+
+.cta-section h2 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.cta-section a[href^="mailto:"] {
+    background-color: var(--color-success); /* Grüner Button beibehalten */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Sanfter blauer Schimmer */
+}
