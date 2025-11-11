@@ -34,18 +34,17 @@
         :root {
             --color-primary: #06b6d4;     /* Akzent Cyan */
             --color-secondary: #0e7490;   /* Dunkler Cyan */
-            --color-background-light: #f1f5f9; /* Hellgrauer Hintergrund */
             --color-background-dark: #1e293b; /* Dunkler Slate */
             --color-text-dark: #1a1a1a;        /* Dunkler Text */
-            --color-text-light: #e2e8f0;       /* Heller Text */
             --color-success: #22c55e;     /* CTA Grün */
         }
         
         body {
             font-family: 'Inter', sans-serif;
             color: var(--color-text-dark);
-            background-color: var(--color-background-light);
+            background-color: white; /* Weißer Standardhintergrund */
             line-height: 1.6;
+            scroll-behavior: smooth; /* Sanftes Scrollen bei Klick auf Ankerlinks */
         }
 
         /* Hero Text Animation */
@@ -114,6 +113,29 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
+        /* NEUE KAMPAGNEN-SEKTION Styling */
+        .campaign-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .campaign-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        /* CHART STYLING (für Mock-up Graphen) */
+        .chart-container {
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0.75rem;
+        }
+        .chart-container:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-color: var(--color-primary);
+        }
+        .chart-bar {
+            transition: height 1s ease-out; /* Für visuellen Effekt */
+        }
+
         /* FORM Styling */
         .form-input {
             border: 2px solid #e2e8f0;
@@ -170,15 +192,10 @@
                 <span class="text-xl">WACHSWERK</span>
             </a>
             
-            <nav class="hidden md:flex space-x-8 text-white font-semibold">
-                <a href="#services" class="hover:text-accent-cyan transition">Leistungen</a>
-                <a href="#testimonials" class="hover:text-accent-cyan transition">Erfolge</a>
-                <a href="#process" class="hover:text-accent-cyan transition">Prozess</a>
-                <a href="#founder" class="hover:text-accent-cyan transition">Über Uns</a>
-                <a href="#contact-form" class="hover:text-accent-cyan transition">Kontakt</a> 
-                <a href="#contact-cta" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-accent-cyan hover:bg-accent-dark cta-nav-button hover:scale-105">Kostenlose Analyse</a>
+            <!-- HAUPT-CTA (Einziger Nav-Punkt) -->
+            <nav>
+                <a href="#contact-cta" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-accent-cyan hover:bg-accent-dark cta-nav-button text-white hover:scale-105">Kostenlose Analyse</a>
             </nav>
-            <!-- Mobile Menu Toggler (Optional) -->
         </div>
     </header>
 
@@ -195,9 +212,29 @@
                     Ihre Skalierung beginnt hier.
                 </h1>
                 
-                <p class="mb-12 max-w-3xl mx-auto">
-                    Wir von Wachswerk transformieren Ihre Marketing-Investitionen in **systematischen Traffic-Zuwachs** und qualitativ hochwertige Leads. Ideal für Kleinunternehmen, die den Einstieg ins Performance Marketing suchen.
+                <!-- NEU: Direkte Frage und Pain Points -->
+                <div class="mb-12 max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold mb-4 text-accent-cyan">Kennen Sie diese Herausforderungen?</h2>
+                    <ul class="text-left space-y-3 text-lg text-gray-300 mx-auto max-w-md">
+                        <li class="flex items-start">
+                            <span class="text-cta-success mr-3 text-xl leading-none">➤</span>
+                            **Lokale Dienstleister:** Sie bezahlen für irrelevante Klicks außerhalb Ihrer Region oder werden in Google Maps ignoriert.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cta-success mr-3 text-xl leading-none">➤</span>
+                            **E-Commerce Shops:** Ihre Kosten pro Akquise (CPA) fressen die Marge auf, oder Ihre Website lädt zu langsam.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cta-success mr-3 text-xl leading-none">➤</span>
+                            **Alle Kleinunternehmen:** Es fehlt ein klares, messbares System, um Traffic *zuverlässig* in qualifizierte Anfragen umzuwandeln.
+                        </li>
+                    </ul>
+                </div>
+                
+                <p class="mb-12 max-w-3xl mx-auto text-gray-400 text-lg">
+                    Wachswerk löst genau diese Probleme, indem wir Ihre Marketing-Investitionen in **systematischen Traffic-Zuwachs** und qualitativ hochwertige Leads transformieren. Ihre Skalierung beginnt hier.
                 </p>
+                <!-- ENDE NEU -->
 
                 <div id="contact-top-cta">
                     <a href="#contact-form" 
@@ -209,44 +246,140 @@
             </div>
         </section>
 
-        <!-- PARTNER / TRUST SECTION -->
+        <!-- PARTNER / TRUST SECTION (AKTUALISIERT) -->
         <section id="partners" class="py-12 bg-dark-slate/90">
             <div class="container mx-auto px-6 max-w-7xl">
                 <p class="text-center text-sm font-semibold uppercase tracking-wider text-gray-400 mb-8">
-                    Vertrauen Sie Experten. Ausgewählte Partner und Kunden:
+                    Technologie-Partner und zertifizierte Expertise
                 </p>
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
+                <!-- NEUE PARTNER -->
+                <div class="grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center text-center">
                     
-                    <!-- Logo Placeholder 1 -->
                     <div class="logo-box">
                         <span class="text-lg font-bold text-gray-300/90">Google Ads</span>
                     </div>
 
-                    <!-- Logo Placeholder 2 -->
                     <div class="logo-box">
-                        <span class="text-xl font-extrabold text-gray-300/90">Shopify</span>
+                        <span class="text-lg font-bold text-gray-300/90">Shopify</span>
                     </div>
 
-                    <!-- Logo Placeholder 3 -->
                     <div class="logo-box">
-                        <span class="text-lg font-semibold text-gray-300/90">ConversionLab</span>
+                        <span class="text-lg font-bold text-gray-300/90">Hubspot</span>
                     </div>
 
-                    <!-- Logo Placeholder 4 -->
-                    <div class="logo-box hidden md:flex">
-                        <span class="text-xl font-bold italic text-gray-300/90">Local Hero</span>
+                    <div class="logo-box">
+                        <span class="text-lg font-bold text-gray-300/90">Google Analytics</span>
                     </div>
 
-                    <!-- Logo Placeholder 5 -->
-                    <div class="logo-box hidden md:flex">
-                        <span class="text-lg font-extrabold text-gray-300/90">SEA-Profis</span>
+                    <div class="logo-box col-span-3 md:col-span-1">
+                        <span class="text-lg font-bold text-gray-300/90">Google Tag Manager</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEUE SEKTION: DATEN-INSIGHTS (GRAPHS) -->
+        <section id="data-insights" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
+                    Datengetriebene Einblicke: So optimieren wir Ihre Performance 📈
+                </h2>
+                <p class="text-xl mb-16 text-center text-gray-600 max-w-3xl mx-auto">
+                    Wir visualisieren den Erfolg. Diese Graphen demonstrieren typische Resultate unserer datengestützten Strategien über einen Zeitraum von 6 Monaten.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Chart 1: CPA Reduction (Linie) -->
+                    <div class="chart-container bg-white p-6 shadow-xl">
+                        <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
+                            <span class="text-cta-success mr-2">✓</span> CPA Reduktion (Kosten pro Akquise)
+                        </h3>
+                        <div class="relative h-40">
+                            <!-- Mock Line Chart -->
+                            <div class="absolute inset-0 flex items-end justify-between px-2 pb-2">
+                                <!-- Baseline 100% -->
+                                <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
+                                <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
+                                <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
+                                <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
+                                <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
+                            </div>
+                            <!-- Data Line (SVG for a clean line graph) -->
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <!-- x=0, y=90 (Start), x=20, y=85, x=40, y=70, x=60, y=50, x=80, y=30, x=100, y=20 (End) -->
+                                <polyline fill="none" stroke="var(--color-primary)" stroke-width="2" 
+                                          points="0,85 20,75 40,60 60,40 80,30 100,20" 
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- Gradient Area below line -->
+                                <defs>
+                                    <linearGradient id="cpaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:var(--color-primary); stop-opacity:0.2" />
+                                        <stop offset="100%" style="stop-color:var(--color-primary); stop-opacity:0.05" />
+                                    </linearGradient>
+                                </defs>
+                                <polygon fill="url(#cpaGradient)" 
+                                         points="0,100 0,85 20,75 40,60 60,40 80,30 100,20 100,100"/>
+                            </svg>
+                            <!-- Success marker -->
+                            <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">-65%</div>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-2">Zeitraum: 6 Monate (Mock-Daten)</p>
+                    </div>
+
+                    <!-- Chart 2: Conversion Rate Increase (Bar) -->
+                    <div class="chart-container bg-white p-6 shadow-xl">
+                        <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
+                            <span class="text-cta-success mr-2">✓</span> Conversion Rate Steigerung
+                        </h3>
+                        <div class="relative h-40 flex items-end justify-around pb-2">
+                            <!-- Baseline -->
+                            <div class="absolute left-0 right-0 bottom-2 border-t border-gray-200"></div>
+                            
+                            <!-- Bar 1 (Monat 1) -->
+                            <div class="text-center w-1/4">
+                                <div class="chart-bar bg-accent-cyan/60 rounded-t-sm mx-auto" style="height: 30%; width: 60%;" title="Monat 1"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">M1</span>
+                            </div>
+                            <!-- Bar 2 (Monat 6) -->
+                            <div class="text-center w-1/4">
+                                <div class="chart-bar bg-accent-cyan rounded-t-sm mx-auto" style="height: 80%; width: 60%;" title="Monat 6"></div>
+                                <span class="text-xs text-gray-500 mt-1 block">M6</span>
+                            </div>
+                            
+                            <!-- Success marker -->
+                            <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">+166%</div>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-2">Vorher vs. Nachher (Mock-Daten)</p>
+                    </div>
+
+                    <!-- Chart 3: Search Impression Share (Donut/Progress) -->
+                    <div class="chart-container bg-white p-6 shadow-xl">
+                        <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
+                            <span class="text-cta-success mr-2">✓</span> Search Impression Share Zuwachs
+                        </h3>
+                        <div class="relative h-40 flex items-center justify-center">
+                            <!-- SVG Progress Circle for 85% -->
+                            <svg class="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
+                                <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50"/>
+                                <!-- The circumference is 2 * pi * r = 2 * 3.14159 * 45 ≈ 282.7 -->
+                                <!-- 85% of 282.7 is 240.3 -->
+                                <circle class="text-accent-cyan" stroke-width="8" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" 
+                                        stroke-dasharray="240.3, 282.7" stroke-linecap="round"/>
+                            </svg>
+                            <div class="absolute text-center">
+                                <span class="text-4xl font-extrabold text-dark-slate">85%</span>
+                                <p class="text-sm text-gray-500">Marktanteil</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-2">Sichtbarkeit in der Suche (Mock-Daten)</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TESTIMONIALS SECTION: Social Proof (JETZT WEITER OBEN) -->
-        <section id="testimonials" class="py-24 bg-gray-50">
+        <!-- TESTIMONIALS SECTION: Social Proof -->
+        <section id="testimonials" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-5xl">
                 <h2 class="text-4xl font-extrabold mb-16 text-center text-dark-slate">
                     Echte Resultate: Was unsere Kunden sagen 🤝
@@ -254,14 +387,14 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- Testimonial 1 -->
-                    <div class="testimonial-card p-8 bg-white shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
                         <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
                         <p class="text-lg italic mb-6 text-gray-700">"Seit der Umstellung auf die CRO-Strategie von Wachswerk konnten wir unsere Conversion Rate um 35% steigern, ohne das Budget erhöhen zu müssen. Das ist echtes Performance-Wachstum!"</p>
                         <div class="font-bold text-dark-slate">- Max Mustermann, E-Commerce Manager</div>
                     </div>
 
                     <!-- Testimonial 2 -->
-                    <div class="testimonial-card p-8 bg-white shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
                         <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
                         <p class="text-lg italic mb-6 text-gray-700">"Die lokale Google Ads Optimierung hat unsere Anfragen verdoppelt. Wir sind jetzt in der Google-Maps-Suche die Nummer 1 in unserer Region. Absolut empfehlenswert."</p>
                         <div class="font-bold text-dark-slate">- Lisa Schmidt, Lokaler Dienstleister</div>
@@ -317,8 +450,53 @@
             </div>
         </section>
 
+        <!-- NEUE SEKTION: GOOGLE ADS KAMPAGNENTYPEN -->
+        <section id="campaigns" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
+                    Jede Kampagne ein Volltreffer: Unsere Google Ads Expertise
+                </h2>
+                <p class="text-xl mb-16 text-center text-gray-600 max-w-3xl mx-auto">
+                    Wir setzen nicht nur auf Standard-Kampagnen. Wir wählen das Tool, das Ihre Ziele am effizientesten erreicht – von lokaler Reichweite bis E-Commerce ROAS.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1: Search Ads -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent-cyan">
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">Search (Suchkampagnen)</h3>
+                        <p class="text-gray-600">Perfekt für die direkte Nachfrage. Wir fangen kaufbereite Nutzer im Moment der Google-Suche ab und reduzieren Streuverluste.</p>
+                    </div>
+                    <!-- Item 2: Shopping Ads & PMax -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent-cyan">
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">Shopping & PMax (E-Comm)</h3>
+                        <p class="text-gray-600">Essentiell für E-Commerce. Wir optimieren Ihren Produkt-Feed und steuern Performance Max (PMax) Kampagnen für maximalen ROAS.</p>
+                    </div>
+                    <!-- Item 3: Local Ads -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent-cyan">
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">Lokale Kampagnen (Maps)</h3>
+                        <p class="text-gray-600">Für Dienstleister vor Ort. Wir machen Sie auf Google Maps und in der lokalen Suche sichtbar, um Laufkundschaft und Anfragen zu generieren.</p>
+                    </div>
+                    <!-- Item 4: YouTube Ads -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent-cyan">
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">YouTube & Video Ads</h3>
+                        <p class="text-gray-600">Ideal für den Markenaufbau und die Neukundengewinnung, indem wir Ihre Botschaft visuell und zielgerichtet an Ihre Wunschkunden ausspielen.</p>
+                    </div>
+                    <!-- Item 5: Display Ads -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent-cyan">
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">Display & Remarketing</h3>
+                        <p class="text-gray-600">Wir holen unentschlossene Besucher zurück auf Ihre Seite (Remarketing) und steigern die Markenbekanntheit im Google Display Netzwerk.</p>
+                    </div>
+                    <!-- Item 6: Analytics -->
+                    <div class="campaign-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-cta-success"> <!-- Different border -->
+                        <h3 class="text-2xl font-bold mb-2 text-dark-slate">Tracking & Analytics</h3>
+                        <p class="text-gray-600">Die Basis für alles. Wir sorgen mit Google Analytics & Tag Manager für ein lückenloses Tracking, damit jeder Klick messbar wird.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- PROCESS SECTION: Klarheit schafft Vertrauen -->
-        <section id="process" class="py-24 bg-gray-50">
+        <section id="process" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-16 text-center text-dark-slate">
                     Von der Analyse zur messbaren Roadmap ⚙️
@@ -327,7 +505,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
                     
                     <!-- STEP 1: Analyse -->
-                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-white rounded-lg hover:shadow-lg">
+                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-gray-50 rounded-lg hover:shadow-lg">
                         <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zM19 12a7 7 0 00-14 0c0 3.328 2.375 6.136 5.5 6.786V21h3v-2.214C16.625 18.136 19 15.328 19 12z"></path></svg>
                         </div>
@@ -336,7 +514,7 @@
                     </div>
 
                     <!-- STEP 2: Strategie -->
-                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-white rounded-lg hover:shadow-lg">
+                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-gray-50 rounded-lg hover:shadow-lg">
                         <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c-1.33 0-2.5.57-3.35 1.5h6.7c-0.85-0.93-2.02-1.5-3.35-1.5zM21 16c-1.33 0-2.5-.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM21 3v13l-12 3V6"></path></svg>
                         </div>
@@ -345,7 +523,7 @@
                     </div>
 
                     <!-- STEP 3: Wachstum -->
-                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-white rounded-lg hover:shadow-lg">
+                    <div class="p-6 transition duration-300 hover:scale-[1.02] hover:bg-gray-50 rounded-lg hover:shadow-lg">
                         <div class="inline-block p-4 rounded-full bg-accent-cyan/10 text-accent-cyan mb-4">
                             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8m-6 4H4a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2z"></path></svg>
                         </div>
@@ -356,7 +534,7 @@
             </div>
         </section>
 
-        <!-- METRICS SECTION: Zahlen & Fakten (Metrik 3 angepasst) -->
+        <!-- METRICS SECTION: Zahlen & Fakten (METRIK 3 ANGEPASST) -->
         <section id="about" class="about-section py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                 <h2 class="text-4xl font-extrabold mb-4 text-dark-slate">Fakten schaffen Vertrauen: Unsere Performance 📊</h2>
@@ -382,12 +560,12 @@
                              KUNDENBINDUNG
                         </p>
                     </div>
-                    <!-- Metric 3: Traffic-Wachstum (Angepasst) -->
+                    <!-- Metric 3: NEUE METRIK -->
                     <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card">
-                        <span class="text-5xl font-extrabold block text-accent-cyan">40%+</span>
+                        <span class="text-5xl font-extrabold block text-accent-cyan">20+</span>
                         <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
-                            <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8m-6 4H4a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2z"></path></svg>
-                            DURCHSCHN. TRAFFIC-WACHSTUM (Jährlich)
+                            <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            ERSTELLTE GOOGLE ADS ACCOUNTS
                         </p>
                     </div>
                 </div>
