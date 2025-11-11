@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wachswerk: Ihr Partner für exponentielles Wachstum</title>
+    
+    <!-- 1. SEO: Title & Description -->
+    <title>Wachswerk – Ihr Partner für Google Ads, SEO & Qualifizierte Kundenanfragen | Kostenlose Analyse</title>
+    <meta name="description" content="Wachswerk ist Ihre Performance Marketing Agentur für exponentielles Wachstum in DACH. Wir optimieren Google Ads, senken den CPA und steigern die Lead-Qualität.">
+    
+    <!-- 1. SEO: Canonical & Robots -->
+    <link rel="canonical" href="https://www.wachswerk.de">
+    <meta name="robots" content="index, follow">
     
     <!-- Lade Tailwind CSS für modernes, responsives Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,6 +36,33 @@
         }
     </script>
 
+    <!-- 1. SEO: JSON-LD Schema Markup (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wachswerk Performance Marketing Agentur",
+      "image": "uploaded:IMG_0051.jpg-4ad87ffc-6c0f-45ff-9fe8-061ecacc67e2",
+      "telephone": "+49 30 1234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musterstr. 1",
+        "addressLocality": "Berlin",
+        "postalCode": "10115",
+        "addressCountry": "DE"
+      },
+      "url": "https://www.wachswerk.de",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Performance Marketing Services",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Google Ads Audit"},
+          {"@type": "Offer", "name": "Conversion Rate Optimization"}
+        ]
+      }
+    }
+    </script>
+
     <!-- Custom Styles (Art Director Anpassungen & Animationen) -->
     <style>
         :root {
@@ -42,12 +76,11 @@
         body {
             font-family: 'Inter', sans-serif;
             color: var(--color-text-dark);
-            background-color: white; /* Weißer Standardhintergrund */
+            background-color: white; 
             line-height: 1.6;
-            scroll-behavior: smooth; /* Sanftes Scrollen bei Klick auf Ankerlinks */
+            scroll-behavior: smooth; 
         }
 
-        /* Hero Text Animation */
         @keyframes subtle-glow {
             0%, 100% { 
                 text-shadow: 0 0 10px rgba(6, 182, 212, 0.4); 
@@ -61,7 +94,6 @@
         .site-header {
             background-color: var(--color-background-dark);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: background-color 0.3s;
         }
         .site-title {
             color: white;
@@ -70,43 +102,20 @@
             letter-spacing: -0.5px;
         }
 
-        /* HERO SECTION Styling - Animation auf den Titel angewandt */
-        .hero-section {
-            background-color: var(--color-background-dark);
-            color: var(--color-text-light);
-        }
-        .hero-section h1 {
-            line-height: 1.1;
-            font-size: clamp(3rem, 7vw, 5rem);
-            font-weight: 900;
-        }
+        /* HERO SECTION Styling */
         .hero-section h1 .text-transparent {
-             animation: subtle-glow 3s infinite alternate ease-in-out; /* Animation für den Akzent-Text */
-        }
-        .hero-section p {
-            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-            font-weight: 300;
-            color: #94a3b8;
+             /* Subtiler Glow-Effekt für den Haupt-Slogan */
+             animation: subtle-glow 3s infinite alternate ease-in-out;
         }
         
-        /* DIENSTLEISTUNGEN (Grid Item) Styling - Verbesserte Hover-Effekte */
-        .service-item {
-            transition: all 0.3s ease-in-out;
-            background-color: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-        }
+        /* DIENSTLEISTUNGEN (Grid Item) Styling */
         .service-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(6, 182, 212, 0.3); /* Stärkerer, thematischer Schatten */
+            box-shadow: 0 15px 30px rgba(6, 182, 212, 0.3);
             border-color: var(--color-primary);
         }
         
-        /* METRIC / TRUST SECTION Styling - Verbesserte Hover-Effekte */
-        .metric-card {
-            transition: all 0.3s ease-in-out;
-            border: 1px solid transparent;
-        }
+        /* METRIC / TRUST SECTION Styling */
         .metric-card:hover {
             transform: scale(1.05);
             border-color: var(--color-primary);
@@ -114,47 +123,32 @@
         }
         
         /* NEUE KAMPAGNEN-SEKTION Styling */
-        .campaign-card {
-            transition: all 0.3s ease-in-out;
-        }
         .campaign-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
         
-        /* CHART STYLING (für Mock-up Graphen) */
-        .chart-container {
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease-in-out;
-            border-radius: 0.75rem;
-        }
+        /* CHART STYLING */
         .chart-container:hover {
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             border-color: var(--color-primary);
         }
-        .chart-bar {
-            transition: height 1s ease-out; /* Für visuellen Effekt */
+
+        /* FAQ Toggle Style */
+        .faq-item button.faq-toggle:focus {
+            outline: none;
+            color: var(--color-primary);
+        }
+        
+        .faq-icon {
+            transition: transform 0.2s;
         }
 
         /* FORM Styling */
-        .form-input {
-            border: 2px solid #e2e8f0;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
         .form-input:focus {
             outline: none;
             border-color: var(--color-primary);
             box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
-        }
-
-        /* FOOTER Styling bleibt unverändert */
-        .site-footer {
-            background-color: var(--color-background-dark);
-            color: #94a3b8;
-        }
-        .footer-title {
-            color: white;
-            font-weight: 800;
         }
         
     </style>
@@ -176,6 +170,95 @@
                 form.reset(); // Formular zurücksetzen
             }, 5000);
         }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Mobile Menu Toggle (UX) ---
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Schließe Menü, wenn ein Link geklickt wird
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+
+            // --- 2. FAQ Accordion Toggle (Content) ---
+            document.querySelectorAll('.faq-toggle').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.faq-icon');
+                    
+                    // Schließe andere offene FAQs
+                    document.querySelectorAll('.faq-content').forEach(otherContent => {
+                        if (otherContent !== content && !otherContent.classList.contains('hidden')) {
+                            otherContent.classList.add('hidden');
+                            otherContent.previousElementSibling.querySelector('.faq-icon').textContent = '+';
+                            otherContent.previousElementSibling.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle des aktuellen FAQs
+                    content.classList.toggle('hidden');
+                    if (content.classList.contains('hidden')) {
+                         icon.textContent = '+';
+                         icon.style.transform = 'rotate(0deg)';
+                    } else {
+                         icon.textContent = '–';
+                         icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+
+            // --- 3. Cookie Banner Handling (Legal) ---
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookiesButton = document.getElementById('acceptCookies');
+            const COOKIE_STORAGE_KEY = 'wachswerk_cookie_consent';
+
+            // Zeige Banner, wenn noch keine Zustimmung gespeichert ist
+            if (!localStorage.getItem(COOKIE_STORAGE_KEY)) {
+                cookieBanner.classList.remove('hidden');
+            }
+
+            if (acceptCookiesButton) {
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem(COOKIE_STORAGE_KEY, 'true');
+                    cookieBanner.classList.add('hidden');
+                });
+            }
+
+
+            // --- 4. Back to Top Button Handling (UX) ---
+            const backToTopButton = document.getElementById('backToTopButton');
+            
+            // Zeige/Verstecke Button beim Scrollen
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) { 
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+
+            // Scrolle nach oben bei Klick
+            if (backToTopButton) {
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 </head>
 <body class="antialiased">
@@ -186,23 +269,43 @@
             <!-- LOGO: Wachswerk mit Wachstumssymbol -->
             <a class="site-title flex items-center space-x-2" href="#hero-intro">
                 <svg class="w-8 h-8 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Stylized growth chart / upward arrow -->
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                 </svg>
                 <span class="text-xl">WACHSWERK</span>
             </a>
             
-            <!-- HAUPT-CTA (Einziger Nav-Punkt) -->
-            <nav>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#services" class="text-white hover:text-accent-cyan transition duration-200">Services</a>
+                <a href="#case-studies" class="text-white hover:text-accent-cyan transition duration-200">Fallstudien</a>
+                <a href="#pricing-model" class="text-white hover:text-accent-cyan transition duration-200">Modelle</a>
+                <a href="#founder" class="text-white hover:text-accent-cyan transition duration-200">Über uns</a>
+                <!-- HAUPT-CTA -->
                 <a href="#contact-cta" class="px-5 py-2 rounded-full font-bold transition duration-300 bg-accent-cyan hover:bg-accent-dark cta-nav-button text-white hover:scale-105">Kostenlose Analyse</a>
             </nav>
+
+            <!-- Mobile Menu Button (UX) -->
+            <button id="mobileMenuButton" class="md:hidden p-2 text-white hover:text-accent-cyan">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
+
+        <!-- Mobile Navigation Menu (UX) -->
+        <nav id="mobileMenu" class="md:hidden hidden bg-dark-slate/95 absolute w-full top-full shadow-lg border-t border-gray-700">
+            <div class="px-6 py-4 flex flex-col space-y-3">
+                <a href="#services" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Services</a>
+                <a href="#case-studies" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Fallstudien</a>
+                <a href="#pricing-model" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Modelle</a>
+                <a href="#founder" class="text-white hover:text-accent-cyan transition duration-200 p-2 border-b border-gray-700">Über uns</a>
+                <a href="#contact-cta" class="w-full text-center py-2 rounded-lg font-bold bg-accent-cyan text-white hover:bg-accent-dark transition duration-300 mt-2">Kostenlose Analyse</a>
+            </div>
+        </nav>
     </header>
 
     <main class="site-main">
         
-        <!-- HERO SECTION: High-Impact mit Dunklem Hintergrund (Fokus auf Traffic & Leads) -->
-        <section id="hero-intro" class="hero-section pt-32 pb-16 md:pt-48 md:pb-24">
+        <!-- HERO SECTION: High-Impact mit Dunklem Hintergrund (FIX: bg-dark-slate hinzugefügt) -->
+        <section id="hero-intro" class="hero-section pt-32 pb-16 md:pt-48 md:pb-24 bg-dark-slate">
             <div class="container mx-auto px-6 max-w-6xl text-center">
                 <h1 class="mb-6 text-white">
                     Starten Sie mit 
@@ -212,7 +315,6 @@
                     Ihre Skalierung beginnt hier.
                 </h1>
                 
-                <!-- NEU: Direkte Frage und Pain Points -->
                 <div class="mb-12 max-w-3xl mx-auto">
                     <h2 class="text-2xl font-semibold mb-4 text-accent-cyan">Kennen Sie diese Herausforderungen?</h2>
                     <ul class="text-left space-y-3 text-lg text-gray-300 mx-auto max-w-md">
@@ -234,7 +336,6 @@
                 <p class="mb-12 max-w-3xl mx-auto text-gray-400 text-lg">
                     Wachswerk löst genau diese Probleme, indem wir Ihre Marketing-Investitionen in **systematischen Traffic-Zuwachs** und qualitativ hochwertige Leads transformieren. Ihre Skalierung beginnt hier.
                 </p>
-                <!-- ENDE NEU -->
 
                 <div id="contact-top-cta">
                     <a href="#contact-form" 
@@ -246,39 +347,47 @@
             </div>
         </section>
 
-        <!-- PARTNER / TRUST SECTION (AKTUALISIERT) -->
+        <!-- PARTNER / TRUST SECTION (Mit Google Partner Badge) -->
         <section id="partners" class="py-12 bg-dark-slate/90">
             <div class="container mx-auto px-6 max-w-7xl">
                 <p class="text-center text-sm font-semibold uppercase tracking-wider text-gray-400 mb-8">
                     Technologie-Partner und zertifizierte Expertise
                 </p>
-                <!-- NEUE PARTNER -->
-                <div class="grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center text-center">
+                <!-- PARTNER & GOOGLE PARTNER BADGE (Vertrauensbildung) -->
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-center text-center">
                     
-                    <div class="logo-box">
+                    <!-- Google Partner Badge (Mock-up) -->
+                    <div class="logo-box col-span-1">
+                        <div class="flex items-center justify-center space-x-2 text-white bg-blue-600/90 rounded-full px-3 py-1 shadow-lg mx-auto w-fit">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span class="text-sm font-semibold">Google Partner</span>
+                        </div>
+                    </div>
+                    
+                    <div class="logo-box col-span-1">
                         <span class="text-lg font-bold text-gray-300/90">Google Ads</span>
                     </div>
 
-                    <div class="logo-box">
+                    <div class="logo-box col-span-1">
                         <span class="text-lg font-bold text-gray-300/90">Shopify</span>
                     </div>
 
-                    <div class="logo-box">
+                    <div class="logo-box col-span-1">
                         <span class="text-lg font-bold text-gray-300/90">Hubspot</span>
                     </div>
 
-                    <div class="logo-box">
+                    <div class="logo-box col-span-1">
                         <span class="text-lg font-bold text-gray-300/90">Google Analytics</span>
                     </div>
 
-                    <div class="logo-box col-span-3 md:col-span-1">
+                    <div class="logo-box col-span-1">
                         <span class="text-lg font-bold text-gray-300/90">Google Tag Manager</span>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- NEUE SEKTION: DATEN-INSIGHTS (GRAPHS) -->
+        <!-- DATEN-INSIGHTS (GRAPHS) -->
         <section id="data-insights" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
@@ -289,16 +398,14 @@
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                    <!-- Chart 1: CPA Reduction (Linie) - ANGEPASST AUF KLARE REDUKTION -->
-                    <div class="chart-container bg-white p-6 shadow-xl">
+                    <!-- Chart 1: CPA Reduction (Linie) -->
+                    <div class="chart-container bg-white p-6 shadow-xl rounded-lg border border-gray-200 transition duration-300">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
                             <span class="text-cta-success mr-2">✓</span> CPA Reduktion (Kosten pro Akquise)
                         </h3>
                         <div class="relative h-40">
                             <!-- Mock Line Chart Grid -->
                             <div class="absolute inset-0 flex items-end justify-between px-2 pb-2">
-                                <!-- Baseline 100% -->
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
                                 <div class="w-1/6 h-full border-l border-b border-gray-200"></div>
@@ -307,11 +414,9 @@
                             </div>
                             <!-- Data Line (SVG für klare Abwärtsbewegung von 80 auf 10) -->
                             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <!-- Punkte: x=0, y=80 (Hoch) bis x=100, y=10 (Tief) -->
                                 <polyline fill="none" stroke="var(--color-primary)" stroke-width="2" 
                                           points="0,80 20,70 40,55 60,40 80,30 100,10" 
                                           stroke-linecap="round" stroke-linejoin="round"/>
-                                <!-- Gradient Area below line -->
                                 <defs>
                                     <linearGradient id="cpaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                                         <stop offset="0%" style="stop-color:var(--color-primary); stop-opacity:0.2" />
@@ -327,53 +432,45 @@
                         <p class="text-sm text-center text-gray-500 mt-2">Zeitraum: 6 Monate (Mock-Daten)</p>
                     </div>
 
-                    <!-- Chart 2: Conversion Rate Increase (Bar) - KLARER VERGLEICH -->
-                    <div class="chart-container bg-white p-6 shadow-xl">
+                    <!-- Chart 2: Conversion Rate Increase (Bar) -->
+                    <div class="chart-container bg-white p-6 shadow-xl rounded-lg border border-gray-200 transition duration-300">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
                             <span class="text-cta-success mr-2">✓</span> Conversion Rate Steigerung (CRO)
                         </h3>
                         <div class="relative h-40 flex items-end justify-around pb-2">
-                            <!-- Baseline -->
                             <div class="absolute left-0 right-0 bottom-2 border-t border-gray-200"></div>
                             
-                            <!-- Bar 1 (Vorher 30%) -->
                             <div class="text-center w-1/4">
                                 <div class="chart-bar bg-accent-cyan/60 rounded-t-sm mx-auto" style="height: 30%; width: 70%;" title="Vorher (30%)"></div>
                                 <span class="text-xs text-gray-500 mt-1 block">Vorher (1.2%)</span>
                             </div>
-                            <!-- Bar 2 (Nachher 80%) -->
                             <div class="text-center w-1/4">
                                 <div class="chart-bar bg-accent-cyan rounded-t-sm mx-auto" style="height: 80%; width: 70%;" title="Nachher (80%)"></div>
                                 <span class="text-xs text-gray-500 mt-1 block">Nachher (3.2%)</span>
                             </div>
                             
-                            <!-- Success marker -->
                             <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">+166%</div>
                         </div>
                         <p class="text-sm text-center text-gray-500 mt-2">Vorher vs. Nachher (Mock-Daten)</p>
                     </div>
 
-                    <!-- Chart 3: NEU - Lead Quality Score Improvement -->
-                    <div class="chart-container bg-white p-6 shadow-xl">
+                    <!-- Chart 3: Lead Quality Score Improvement -->
+                    <div class="chart-container bg-white p-6 shadow-xl rounded-lg border border-gray-200 transition duration-300">
                         <h3 class="text-xl font-bold mb-4 text-dark-slate flex items-center">
                             <span class="text-cta-success mr-2">✓</span> Lead Quality Score Steigerung
                         </h3>
                         <div class="relative h-40 flex items-end justify-around pb-2">
-                            <!-- Baseline -->
                             <div class="absolute left-0 right-0 bottom-2 border-t border-gray-200"></div>
                             
-                            <!-- Bar 1 (Vorher 40%) -->
                             <div class="text-center w-1/4">
                                 <div class="chart-bar bg-dark-slate/50 rounded-t-sm mx-auto" style="height: 40%; width: 70%;" title="Vorher (40%)"></div>
                                 <span class="text-xs text-gray-500 mt-1 block">Start Score</span>
                             </div>
-                            <!-- Bar 2 (Nachher 90%) -->
                             <div class="text-center w-1/4">
-                                <div class="chart-bar bg-dark-slate rounded-t-sm mx-auto" style="height: 90%; width: 70%;" title="Nachher (90%)"></div>
+                                <div class="chart-bar bg-dark-slate rounded-t-sm mx-auto" style="height: 90%; width: 70%;" title="Ziel Score (90%)"></div>
                                 <span class="text-xs text-gray-500 mt-1 block">Ziel Score</span>
                             </div>
                             
-                            <!-- Success marker -->
                             <div class="absolute top-4 right-4 bg-cta-success text-white px-2 py-0.5 text-xs font-bold rounded-full shadow-lg">+125%</div>
                         </div>
                         <p class="text-sm text-center text-gray-500 mt-2">Fokus auf qualifizierte Leads (Mock-Daten)</p>
@@ -391,17 +488,77 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- Testimonial 1 -->
-                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 rounded-xl transition duration-300 hover:scale-[1.02] hover:shadow-lg">
                         <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
                         <p class="text-lg italic mb-6 text-gray-700">"Seit der Umstellung auf die CRO-Strategie von Wachswerk konnten wir unsere Conversion Rate um 35% steigern, ohne das Budget erhöhen zu müssen. Das ist echtes Performance-Wachstum!"</p>
                         <div class="font-bold text-dark-slate">- Max Mustermann, E-Commerce Manager</div>
                     </div>
 
                     <!-- Testimonial 2 -->
-                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 transition duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="testimonial-card p-8 bg-gray-50 shadow-xl border border-gray-200 rounded-xl transition duration-300 hover:scale-[1.02] hover:shadow-lg">
                         <svg class="w-8 h-8 text-accent-cyan mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5zM20 12c0-2.21-1.79-4-4-4s-4 1.79-4 4h8zm-4 6c-1.33 0-2.5-0.57-3.35-1.5h6.7c-0.85 0.93-2.02 1.5-3.35 1.5z"/></svg>
                         <p class="text-lg italic mb-6 text-gray-700">"Die lokale Google Ads Optimierung hat unsere Anfragen verdoppelt. Wir sind jetzt in der Google-Maps-Suche die Nummer 1 in unserer Region. Absolut empfehlenswert."</p>
                         <div class="font-bold text-dark-slate">- Lisa Schmidt, Lokaler Dienstleister</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEUE SEKTION: FALLSTUDIEN (Content) -->
+        <section id="case-studies" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
+                    Messbare Erfolge: Unsere Fallstudien im Detail 🔬
+                </h2>
+                <p class="text-xl mb-16 text-center text-gray-600 max-w-3xl mx-auto">
+                    Von lokaler Suchpräsenz bis zur internationalen E-Commerce-Skalierung.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Fallstudie 1: Lokaler Dienstleister -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl campaign-card border-t-4 border-cta-success">
+                        <p class="text-sm font-semibold uppercase text-cta-success mb-2">Lokaler Dienstleister, Berlin</p>
+                        <h3 class="text-2xl font-bold mb-4 text-dark-slate">3x mehr Anrufe durch lokale Ads</h3>
+                        <p class="text-gray-600 mb-4">**Herausforderung:** Hohe Klickpreise und irrelevanter Traffic außerhalb der Zielregion (30 km Radius).</p>
+                        <p class="text-gray-600 mb-4">**Lösung:** Umstellung auf strikt geographisches Targeting, Einsatz von Anruf-Assets und Optimierung des Google My Business Eintrags.</p>
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg border-l-4 border-cta-success/70">
+                            <p class="font-bold text-lg text-dark-slate">Resultat:</p>
+                            <ul class="list-none pl-0 text-sm space-y-1 mt-2">
+                                <li class="flex justify-between items-center">Qualifizierte Anfragen: <span class="font-bold text-xl text-cta-success">+210%</span></li>
+                                <li class="flex justify-between items-center">CPA (Kosten pro Anruf): <span class="font-bold text-xl text-red-500">-40%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fallstudie 2: E-Commerce Shop -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl campaign-card border-t-4 border-accent-cyan">
+                        <p class="text-sm font-semibold uppercase text-accent-cyan mb-2">E-Commerce Shop (Mode)</p>
+                        <h3 class="text-2xl font-bold mb-4 text-dark-slate">ROAS Steigerung durch PMax Strategie</h3>
+                        <p class="text-gray-600 mb-4">**Herausforderung:** Sinkender Return on Ad Spend (ROAS) und ineffiziente Shopping-Kampagnen. Mangelhafte Produkt-Feed-Qualität.</p>
+                        <p class="text-gray-600 mb-4">**Lösung:** Restrukturierung des Merchant Centers, Verbesserung der Produkt-Titel und Migration auf Performance Max mit klaren Zielgruppen-Signalen.</p>
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg border-l-4 border-accent-cyan/70">
+                            <p class="font-bold text-lg text-dark-slate">Resultat:</p>
+                            <ul class="list-none pl-0 text-sm space-y-1 mt-2">
+                                <li class="flex justify-between items-center">Durchschnittlicher ROAS: <span class="font-bold text-xl text-cta-success">+65%</span></li>
+                                <li class="flex justify-between items-center">Conversion Rate (CR): <span class="font-bold text-xl text-cta-success">+30%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fallstudie 3: B2B Software -->
+                    <div class="p-8 bg-white rounded-xl shadow-2xl campaign-card border-t-4 border-dark-slate">
+                        <p class="text-sm font-semibold uppercase text-dark-slate mb-2">B2B Software (SAAS)</p>
+                        <h3 class="text-2xl font-bold mb-4 text-dark-slate">Lead-Qualität auf A-Level verbessert</h3>
+                        <p class="text-gray-600 mb-4">**Herausforderung:** Hohe Anzahl an Leads, aber geringe Abschlussquote (Sales-Qualified-Leads Mangel). Budgetverbrennung durch generische Keywords.</p>
+                        <p class="text-gray-600 mb-4">**Lösung:** Einsatz von Negativ-Keywords, exklusives Targeting von Unternehmensgrößen und Implementierung eines Lead Scoring Modells im Tracking.</p>
+                        <div class="mt-6 p-4 bg-gray-100 rounded-lg border-l-4 border-dark-slate/70">
+                            <p class="font-bold text-lg text-dark-slate">Resultat:</p>
+                            <ul class="list-none pl-0 text-sm space-y-1 mt-2">
+                                <li class="flex justify-between items-center">Kosten pro SQL (Sales-Qualified Lead): <span class="font-bold text-xl text-red-500">-55%</span></li>
+                                <li class="flex justify-between items-center">Time-on-Page (Zielgruppen): <span class="font-bold text-xl text-cta-success">+45%</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -415,8 +572,8 @@
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <!-- BLOCK 1: Traffic & Reichweite (Der Start) -->
-                    <div class="service-item p-8 shadow-xl">
+                    <!-- BLOCK 1: Traffic & Reichweite -->
+                    <div class="service-item p-8 shadow-xl rounded-xl border border-gray-100 transition duration-300 transform hover:scale-[1.03]">
                         <span class="text-5xl mb-4 block text-accent-cyan">🚀</span>
                         <h3 class="text-2xl font-bold mb-3 text-dark-slate">Traffic-Zuwachs & Reichweiten-Aufbau</h3>
                         <p class="text-lg text-gray-600 mb-4">Der erste Schritt zur Skalierung: Wir optimieren Ihre Google-Kampagnen auf maximalen, zielgerichteten Traffic und stellen sicher, dass Ihre Marke dort sichtbar ist, wo potentielle Kunden suchen.</p>
@@ -427,8 +584,8 @@
                         </ul>
                     </div>
 
-                    <!-- BLOCK 2: Qualifizierte Leads & Conversion (Die Qualität) -->
-                    <div class="service-item p-8 shadow-xl">
+                    <!-- BLOCK 2: Qualifizierte Leads & Conversion -->
+                    <div class="service-item p-8 shadow-xl rounded-xl border border-gray-100 transition duration-300 transform hover:scale-[1.03]">
                         <span class="text-5xl mb-4 block text-cta-success">📞</span>
                         <h3 class="text-2xl font-bold mb-3 text-dark-slate">Qualifizierte Kundenanfragen (CPA-Fokus)</h3>
                         <p class="text-lg text-gray-600 mb-4">Es geht nicht nur um Klicks, sondern um die Qualität der Leads. Wir optimieren auf die niedrigsten Kosten pro qualifizierter Anfrage (CPA), um Ihre Sales-Pipeline zu füllen.</p>
@@ -439,8 +596,8 @@
                         </ul>
                     </div>
 
-                    <!-- BLOCK 3: Technical Readiness (Die Basis) -->
-                    <div class="service-item p-8 shadow-xl">
+                    <!-- BLOCK 3: Technical Readiness -->
+                    <div class="service-item p-8 shadow-xl rounded-xl border border-gray-100 transition duration-300 transform hover:scale-[1.03]">
                         <span class="text-5xl mb-4 block text-yellow-500">⚙️</span>
                         <h3 class="text-2xl font-bold mb-3 text-dark-slate">SEO & Technische Website-Optimierung</h3>
                         <p class="text-lg text-gray-600 mb-4">Traffic und Leads benötigen eine funktionierende Basis. Wir stellen sicher, dass Ihre Website technisch optimal läuft, schnell lädt und organisch besser gefunden wird (SEO).</p>
@@ -454,7 +611,7 @@
             </div>
         </section>
 
-        <!-- NEUE SEKTION: GOOGLE ADS KAMPAGNENTYPEN -->
+        <!-- GOOGLE ADS KAMPAGNENTYPEN -->
         <section id="campaigns" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
@@ -498,7 +655,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- PROCESS SECTION: Klarheit schafft Vertrauen -->
         <section id="process" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
@@ -538,6 +695,124 @@
             </div>
         </section>
 
+        <!-- NEUE SEKTION: SO ARBEITEN WIR ZUSAMMEN (Preismodelle) -->
+        <section id="pricing-model" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="text-4xl font-extrabold mb-4 text-center text-dark-slate">
+                    Transparenz: So arbeiten wir zusammen 🤝
+                </h2>
+                <p class="text-xl mb-16 text-center text-gray-600 max-w-3xl mx-auto">
+                    Wir bieten flexible Modelle, die sich an der Skalierungsphase und den Zielen Ihres Unternehmens orientieren – immer messbar und fair.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    
+                    <!-- Modell 1: Audit & Setup (Projekt) -->
+                    <div class="p-8 rounded-xl shadow-xl border-t-8 border-accent-cyan bg-white h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-dark-slate">1. Audit & Setup</h3>
+                            <p class="text-gray-600 mb-6">Perfekt für den Start oder die Korrektur ineffizienter Konten. Einmaliges Projekt zur Schaffung der technischen und strategischen Basis.</p>
+                            <div class="text-5xl font-extrabold text-accent-cyan mb-6">Projektbasiert</div>
+                            <ul class="text-left space-y-2 text-gray-700">
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Vollständiger 70-Punkte Audit</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Technisches Tracking Setup (GTM/GA)</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Erstellung von 3 Kern-Kampagnen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Modell 2: Retainer (Monatlich) -->
+                    <div class="p-8 rounded-xl shadow-2xl border-t-8 border-dark-slate bg-white h-full flex flex-col justify-between transform scale-[1.05] z-10 transition duration-300 hover:shadow-3xl">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-dark-slate">2. Monatliches Retainer</h3>
+                            <p class="text-gray-700 mb-6 font-semibold">Das beliebteste Modell. Kontinuierliche Optimierung, Skalierung und wöchentliches Reporting zur Senkung des CPA.</p>
+                            <div class="text-5xl font-extrabold text-dark-slate mb-6">Feste Gebühr</div>
+                            <ul class="text-left space-y-2 text-gray-800">
+                                <li class="flex items-center font-bold"><span class="text-cta-success mr-2">✓</span> Beinhaltet alle Setup-Leistungen</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Kontinuierliche Keyword/Zielgruppen-Analyse</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Regelmäßige Strategie-Calls (Wöchentlich)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Modell 3: Performance (Optional) -->
+                    <div class="p-8 rounded-xl shadow-xl border-t-8 border-accent-cyan bg-white h-full flex flex-col justify-between transition duration-300 hover:shadow-2xl">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-dark-slate">3. Performance Bonus</h3>
+                            <p class="text-gray-600 mb-6">Für etablierte Unternehmen. Unsere Gebühr ist teilweise an das Erreichen Ihrer Performance-Ziele (z.B. CPA oder ROAS) gekoppelt.</p>
+                            <div class="text-5xl font-extrabold text-accent-cyan mb-6">CPA/ROAS-Abhängig</div>
+                            <ul class="text-left space-y-2 text-gray-700">
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Retainer-Basis + Erfolgsbeteiligung</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Maximaler Fokus auf die Marge</li>
+                                <li class="flex items-center"><span class="text-cta-success mr-2">✓</span> Volle Transparenz und Zielvereinbarung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center text-sm text-gray-500 mt-12">
+                    **Hinweis:** Wir erstellen nach der Potenzialanalyse ein individuelles Angebot, das auf Ihre spezifische Situation zugeschnitten ist.
+                </p>
+            </div>
+        </section>
+
+        <!-- NEUE SEKTION: FAQ (Häufig gestellte Fragen) -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl font-extrabold mb-12 text-center text-dark-slate">
+                    Häufig gestellte Fragen (FAQ) ❓
+                </h2>
+                
+                <div class="space-y-4">
+                    
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200">
+                        <button class="faq-toggle w-full flex justify-between items-center font-bold text-lg text-dark-slate">
+                            <span>1. Mit welchem monatlichen Werbebudget arbeiten Sie?</span>
+                            <span class="faq-icon text-accent-cyan text-2xl transition duration-300">+</span>
+                        </button>
+                        <div class="faq-content mt-3 hidden text-gray-600">
+                            Wir arbeiten primär mit Kunden zusammen, die bereit sind, monatlich mindestens 1.500 € in Google Ads (exklusive unserer Agenturgebühr) zu investieren. Niedrigere Budgets führen oft zu unzureichenden Datenpunkten für eine sinnvolle Optimierung.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200">
+                        <button class="faq-toggle w-full flex justify-between items-center font-bold text-lg text-dark-slate">
+                            <span>2. Wie lange dauert es, bis die ersten Ergebnisse sichtbar sind?</span>
+                            <span class="faq-icon text-accent-cyan text-2xl transition duration-300">+</span>
+                        </button>
+                        <div class="faq-content mt-3 hidden text-gray-600">
+                            Nach dem initialen Setup (ca. 2 Wochen) sehen wir in der Regel innerhalb der ersten 4-6 Wochen signifikante Optimierungen beim CPA und der Lead-Qualität. Für eine vollständige Skalierung planen wir einen Horizont von 3 bis 6 Monaten ein.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200">
+                        <button class="faq-toggle w-full flex justify-between items-center font-bold text-lg text-dark-slate">
+                            <span>3. Welche Vertragsbindungen gibt es?</span>
+                            <span class="faq-icon text-accent-cyan text-2xl transition duration-300">+</span>
+                        </button>
+                        <div class="faq-content mt-3 hidden text-gray-600">
+                            Nach einer initialen Testphase von 3 Monaten bieten wir flexible monatlich kündbare Retainer-Verträge an. Wir sind von unseren Ergebnissen überzeugt und benötigen keine langen Vertragslaufzeiten.
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-200">
+                        <button class="faq-toggle w-full flex justify-between items-center font-bold text-lg text-dark-slate">
+                            <span>4. Ich habe bereits eine Agentur. Macht ein Wechsel Sinn?</span>
+                            <span class="faq-icon text-accent-cyan text-2xl transition duration-300">+</span>
+                        </button>
+                        <div class="faq-content mt-3 hidden text-gray-600">
+                            Ja, wenn Sie mit den aktuellen Ergebnissen unzufrieden sind oder die Kosten pro Lead zu hoch sind. Unsere kostenlose Potenzialanalyse deckt Ineffizienzen in Ihrem aktuellen Setup auf und zeigt Ihnen klar, welche kurzfristigen Hebel noch ungenutzt sind.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- METRICS SECTION: Zahlen & Fakten -->
         <section id="about" class="about-section py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
@@ -549,7 +824,7 @@
                 <!-- METRICS GRID -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-dark-slate border-t border-b border-gray-300 py-6">
                     <!-- Metric 1: Abgeschlossene Audits -->
-                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card transition duration-300">
                         <span class="text-5xl font-extrabold block text-accent-cyan">100+</span>
                         <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
                             <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-4 18h4m-4-6h4m0-6h-4m-4 12v-6m-4 6v-6"></path></svg>
@@ -557,7 +832,7 @@
                         </p>
                     </div>
                     <!-- Metric 2: Kundenbindung -->
-                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card transition duration-300">
                         <span class="text-5xl font-extrabold block text-accent-cyan">95%</span>
                         <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
                              <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7h-4V3H7v4H3v4h4v4h4v4h4v-4h4v-4h-4V9z"></path></svg>
@@ -565,7 +840,7 @@
                         </p>
                     </div>
                     <!-- Metric 3: Erstellte Accounts -->
-                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card">
+                    <div class="p-4 bg-gray-50 rounded-lg shadow-inner metric-card transition duration-300">
                         <span class="text-5xl font-extrabold block text-accent-cyan">20+</span>
                         <p class="text-sm uppercase tracking-widest text-gray-600 mt-1">
                             <svg class="w-4 h-4 inline-block mr-1 align-sub" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -576,7 +851,7 @@
             </div>
         </section>
 
-        <!-- FOUNDER / ÜBER UNS SECTION: Der menschliche Faktor (Bildpfad korrigiert) -->
+        <!-- FOUNDER / ÜBER UNS SECTION: Der menschliche Faktor -->
         <section id="founder" class="py-24 bg-dark-slate text-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="text-4xl font-extrabold mb-16 text-center text-white">
@@ -584,11 +859,11 @@
                 </h2>
                 
                 <div class="md:flex md:space-x-12 items-center max-w-4xl mx-auto">
-                    <!-- Image - NEUER KORRIGIERTER PFAD -->
-                    <div class="flex-shrink-0 mb-8 md:mb-0 md:w-1/3">
+                    <!-- Image (FIX: Bildgröße und Zentrierung für Desktop angepasst) -->
+                    <div class="flex-shrink-0 mb-8 md:mb-0 md:w-1/3 flex justify-center">
                         <img src="uploaded:IMG_0051.jpg-4ad87ffc-6c0f-45ff-9fe8-061ecacc67e2" 
                              alt="Profilbild von Mauro Zoffoli, Gründer von Wachswerk" 
-                             class="rounded-full w-48 h-48 md:w-full md:h-auto object-cover mx-auto shadow-2xl border-4 border-accent-cyan transition duration-500 hover:scale-[1.03] hover:shadow-cyan-500/50">
+                             class="rounded-full w-48 h-48 object-cover shadow-2xl border-4 border-accent-cyan transition duration-500 hover:scale-[1.03] hover:shadow-cyan-500/50 md:w-64 md:h-64">
                     </div>
                     
                     <!-- Text / Bio -->
@@ -628,7 +903,7 @@
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Ihr Name / Unternehmen</label>
                             <input type="text" id="name" name="name" required
-                                   class="form-input w-full px-4 py-3 rounded-lg text-dark-slate"
+                                   class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 text-dark-slate"
                                    placeholder="Max Mustermann GmbH">
                         </div>
                         
@@ -636,7 +911,7 @@
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Ihre E-Mail Adresse</label>
                             <input type="email" id="email" name="email" required
-                                   class="form-input w-full px-4 py-3 rounded-lg text-dark-slate"
+                                   class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 text-dark-slate"
                                    placeholder="kontakt@ihrfirma.de">
                         </div>
                         
@@ -644,7 +919,7 @@
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Ihre Anfrage</label>
                             <textarea id="message" name="message" rows="4" required
-                                      class="form-input w-full px-4 py-3 rounded-lg text-dark-slate"
+                                      class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 text-dark-slate"
                                       placeholder="Ich benötige eine Analyse meiner Google Ads Kampagnen..."></textarea>
                         </div>
                         
@@ -682,10 +957,10 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer py-12">
+    <!-- FOOTER (FIX: Hintergrundfarbe und Textfarbe für Konsistenz hinzugefügt) -->
+    <footer class="site-footer py-12 bg-dark-slate text-gray-400">
         <div class="container mx-auto px-6 max-w-5xl text-center text-sm">
-            <p class="footer-title text-xl mb-3">WACHSWERK</p>
+            <p class="footer-title text-xl mb-3 text-white">WACHSWERK</p>
             <p class="opacity-90">Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
             
             <div class="mt-8 pt-6 border-t border-gray-700">
@@ -698,6 +973,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- BACK TO TOP BUTTON (UX) -->
+    <button id="backToTopButton" class="fixed bottom-6 right-6 p-3 rounded-full bg-accent-cyan text-white shadow-xl hover:bg-accent-dark transition duration-300 z-40 hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- COOKIE CONSENT BANNER (Legal) -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-dark-slate/95 text-white p-4 z-[100] hidden">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center max-w-7xl px-6">
+            <p class="text-sm mb-3 md:mb-0">
+                Wir nutzen Cookies und Tracking-Technologien (Google Analytics, Google Ads) zur Verbesserung unserer Dienstleistungen und des Nutzererlebnisses. Durch die weitere Nutzung stimmen Sie dem zu. 
+                <a href="#" class="text-accent-cyan underline hover:text-white transition">Datenschutzerklärung</a>.
+            </p>
+            <button id="acceptCookies" class="px-6 py-2 rounded-lg bg-cta-success hover:bg-green-600 font-bold text-sm transition duration-300 flex-shrink-0">
+                Zustimmen & Schließen
+            </button>
+        </div>
+    </div>
 
 </body>
 </html>
