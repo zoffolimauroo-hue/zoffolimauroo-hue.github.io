@@ -1,10 +1,24 @@
-# 🌟 Deine Agentur: Wachswerk
+---
+layout: default
+title: Home - Performance Marketing & CRO Agentur
+---
+
+<section id="hero-intro" class="hero-section">
+
+# 🌟 [Agenturname]: Performance-Spezialisten für Lokales & E-Commerce
 
 Wir sind eine Performance-Agentur, die sich darauf spezialisiert hat, **lokale Dienstleister** und **E-Commerce-Shops** durch gezielte Google-Strategien und Conversion Rate Optimierung (CRO) zu nachhaltigem Wachstum zu führen. Unsere Mission: Mehr Sichtbarkeit, mehr Anfragen, mehr Umsatz.
 
+[Jetzt unverbindliches Erstgespräch vereinbaren](mailto:hallo@deineagentur.de)
+
+</section>
+
+
+<section id="services" class="services-section">
+
 ## Unsere Kern-Dienstleistungen 🚀
 
-Wir bieten massgeschneiderte Lösungen, die bezahlte (Google Ads) und organische Strategien (SEO) intelligent miteinander verknüpfen:
+Wir bieten maßgeschneiderte Lösungen, die bezahlte (Google Ads) und organische Strategien (SEO) intelligent miteinander verknüpfen:
 
 ### 1. 🎯 Performance Marketing (Google Ads Management)
 
@@ -22,8 +36,23 @@ Ihre Präsenz beginnt da, wo Ihre Kunden suchen – organisch und in modernen Su
 * **Strategien für KI-Suchmaschinen:** Entwicklung von Content- und Datenstrukturen, die für die **Generative Search Experience (SGE)** von Google und andere KI-basierte Suchlösungen optimiert sind, um Ihre Auffindbarkeit zukunftssicher zu machen.
 * **Technische & Content-SEO:** Fundamentale Optimierung Ihrer Website-Struktur und Inhalte für nachhaltig hohe Rankings.
 
-## Kontaktieren Sie uns
+### 3. ✨ Conversion Rate Optimierung (CRO)
+
+Wir sorgen dafür, dass mehr Besucher zu zahlenden Kunden werden – ohne mehr Traffic einkaufen zu müssen.
+
+* **Analyse & Testing:** Durch datengestützte A/B-Tests, Heatmaps und Nutzer-Interviews identifizieren wir Barrieren im Kaufprozess.
+* **User Experience (UX) Fokus:** Optimierung Ihrer Landingpages und des Checkouts für eine reibungslose Customer Journey.
+* **Mehr Umsatz:** Steigerung der Abschlussquote, was den Wert jedes einzelnen Werbeklicks oder Besuchers erhöht.
+
+</section>
+
+
+<section id="contact-cta" class="cta-section">
+
+## Bereit für messbares Wachstum?
 
 Wir freuen uns darauf, die digitale Strategie Ihrer Agentur kennenzulernen und sie auf die nächste Stufe zu heben.
 
-[Jetzt kostenlose Beratung anfordern!](mailto:zoffoli.mauroo@gmail.ch)
+[Jetzt unverbindliches Erstgespräch vereinbaren](mailto:hallo@deineagentur.de)
+
+</section>
