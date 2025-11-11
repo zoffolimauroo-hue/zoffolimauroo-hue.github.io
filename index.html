@@ -108,7 +108,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 0.6;
+            opacity: 0.7; /* Kontrast leicht erhöht */
             transition: opacity 0.3s;
             filter: grayscale(100%);
         }
@@ -164,7 +164,9 @@
                 </p>
 
                 <div id="contact-top-cta">
-                    <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-lg bg-cta-success hover:bg-green-600 transition duration-300 hover:shadow-2xl hover:scale-105 shadow-green-500/50">
+                    <a href="mailto:hallo@deineagentur.de" 
+                       class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider 
+                              shadow-xl bg-cta-success hover:bg-green-600 transition duration-300 hover:shadow-2xl hover:scale-105">
                         Kostenlose Potenzialanalyse anfordern
                     </a>
                 </div>
@@ -181,27 +183,27 @@
                     
                     <!-- Logo Placeholder 1 -->
                     <div class="logo-box">
-                        <span class="text-lg font-bold text-gray-300">Google Ads</span>
+                        <span class="text-lg font-bold text-gray-300/90">Google Ads</span>
                     </div>
 
                     <!-- Logo Placeholder 2 -->
                     <div class="logo-box">
-                        <span class="text-xl font-extrabold text-gray-300">Shopify</span>
+                        <span class="text-xl font-extrabold text-gray-300/90">Shopify</span>
                     </div>
 
                     <!-- Logo Placeholder 3 -->
                     <div class="logo-box">
-                        <span class="text-lg font-semibold text-gray-300">ConversionLab</span>
+                        <span class="text-lg font-semibold text-gray-300/90">ConversionLab</span>
                     </div>
 
                     <!-- Logo Placeholder 4 -->
                     <div class="logo-box hidden md:flex">
-                        <span class="text-xl font-bold italic text-gray-300">Local Hero</span>
+                        <span class="text-xl font-bold italic text-gray-300/90">Local Hero</span>
                     </div>
 
                     <!-- Logo Placeholder 5 -->
                     <div class="logo-box hidden md:flex">
-                        <span class="text-lg font-extrabold text-gray-300">SEA-Profis</span>
+                        <span class="text-lg font-extrabold text-gray-300/90">SEA-Profis</span>
                     </div>
                 </div>
             </div>
@@ -362,10 +364,12 @@
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">
                     Starten Sie jetzt Ihre digitale Marktführerschaft.
                 </h2>
-                <p class="text-xl mb-12 opacity-80">
+                <p class="text-xl mb-12 opacity-90">
                     Wir bieten Ihnen eine **kostenlose Potenzialanalyse** Ihrer bestehenden Kampagnen. Investieren Sie 15 Minuten in Ihr zukünftiges Wachstum.
                 </p>
-                <a href="mailto:hallo@deineagentur.de" class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider shadow-xl transition duration-300 bg-accent-cyan hover:bg-accent-dark hover:scale-105 shadow-cyan-500/50">
+                <a href="mailto:hallo@deineagentur.de" 
+                   class="inline-block py-4 px-12 rounded-full text-white font-bold text-xl uppercase tracking-wider 
+                          shadow-xl transition duration-300 bg-accent-cyan hover:bg-accent-dark hover:scale-105">
                     Kostenlose Analyse buchen
                 </a>
             </div>
@@ -377,7 +381,7 @@
     <footer class="site-footer py-12">
         <div class="container mx-auto px-6 max-w-5xl text-center text-sm">
             <p class="footer-title text-xl mb-3">[AGENTURNAME]</p>
-            <p>Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
+            <p class="opacity-90">Performance Marketing & Digitale Strategien für Ihren Erfolg.</p>
             
             <div class="mt-8 pt-6 border-t border-gray-700">
                 <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> | Agentur für digitales Wachstum.</p>
