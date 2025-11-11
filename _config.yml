@@ -1,0 +1,11 @@
+# Jekyll Konfigurationsdatei
+# -------------------------
+
+# Das Standard-Theme für GitHub Pages
+theme: jekyll-theme-minimal
+
+# Titel deiner Agentur-Website
+title: Wachswerk
+
+# Eine kurze Beschreibung
+description: Performance Marketing für lokale Dienstleister und E-Commerce Shops.
