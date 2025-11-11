@@ -1,4 +1,4 @@
-# 🌟 Deine Agentur: [Wachswerk]
+# 🌟 Deine Agentur: Wachswerk
 
 Wir sind eine Performance-Agentur, die sich darauf spezialisiert hat, **lokale Dienstleister** und **E-Commerce-Shops** durch gezielte Google-Strategien und Conversion Rate Optimierung (CRO) zu nachhaltigem Wachstum zu führen. Unsere Mission: Mehr Sichtbarkeit, mehr Anfragen, mehr Umsatz.
 
